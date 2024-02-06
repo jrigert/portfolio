@@ -1,4 +1,4 @@
-import Heading, { VALID_HEADINGS } from '@/app/components/Heading';
+import Heading, { VALID_HEADINGS } from '@/components/Heading';
 
 export default function Home() {
   return (
