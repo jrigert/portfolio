@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --white: #FFFAFF;
+    --cyan: #30bced;
+    --green: #4D8B31;
+    --orange: #FF8427;
+    --black: #120305;
+
+    --background: var(--white);
+    --foreground: var(--black);
+
+    --primary: var(--cyan);
+    --primary-foreground: var(--black);
+
+    --secondary: var(--green);
+    --secondary-foreground: var(--white);
+
+    --loud: var(--orange);
+    --loiud-foreground: var(--white);
+  }
+}

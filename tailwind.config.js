@@ -4,11 +4,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        contrast: "#120305",
-        primary: "#30bced",
-        secondary: "#4D8B31",
-        loud: "#FF8427",
-        white: '#FFFAFF'
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)'
+        },
+        contrast: {
+          DEFAULT: 'var(--contrast)',
+          foreground: 'var(--contrast-foreground)'
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary-foreground)'
+        },
+        loud: {
+          DEFAULT: 'var(--loud)',
+          foreground: 'var(--loud-foreground)'
+        },
       }
     }
   },

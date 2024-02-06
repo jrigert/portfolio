@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen bg-contrast">
       <div className="container mx-auto pt-6">
         {VALID_HEADINGS.map((heading) => (
-          <Heading key={heading} tag={heading} className="text-white">
+          <Heading key={heading} tag={heading} className="text-primary">
             This is a bunch of text for a heading ({heading})
           </Heading>
         ))}
