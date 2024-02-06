@@ -1,5 +1,7 @@
 import { WithClassName } from '@/types/props';
 import { classNames } from '@/utils/style';
+import { cva } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
 import React, { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 
 export const VALID_HEADINGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
@@ -10,14 +12,23 @@ export interface HeadingProps extends WithClassName {
   tagStyle?: HeadingLevel;
 }
 
-const STYLE_MAP: Record<HeadingLevel, string> = {
-  h1: 'text-5xl',
-  h2: 'text-4xl',
-  h3: 'text-3xl',
-  h4: 'text-2xl',
-  h5: 'text-xl',
-  h6: 'text-lg',
-} as const;
+export type HeadingVariantProps = VariantProps<typeof headingVariants>;
+
+const headingVariants = cva([], {
+  variants: {
+    level: {
+      h1: ['text-5xl', 'mb-6'],
+      h2: ['text-4xl', 'mb-4'],
+      h3: ['text-3xl', 'mb-3'],
+      h4: ['text-2xl', 'mb-2'],
+      h5: ['text-xl', 'mb-2'],
+      h6: ['text-lg', 'mb-2'],
+    },
+  },
+  defaultVariants: {
+    level: 'h1',
+  },
+});
 
 const sanitizeHeadingLevel = (
   heading: HeadingLevel | undefined,
@@ -36,7 +47,7 @@ const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (props) => {
   const tagStyle = sanitizeHeadingLevel(tagStyleProp, tagProp);
 
   const combinedClassNames = useMemo(() => {
-    const headingClassNames = STYLE_MAP[tagStyle];
+    const headingClassNames = headingVariants({ level: tagStyle });
     return classNames(headingClassNames, className);
   }, [className, tagStyle]);
 
