@@ -14,7 +14,7 @@ export interface HeadingProps extends WithClassName {
 
 export type HeadingVariantProps = VariantProps<typeof headingVariants>;
 
-const headingVariants = cva([], {
+const headingVariants = cva(['font-bold'], {
   variants: {
     level: {
       h1: ['text-5xl', 'mb-6'],
@@ -41,7 +41,9 @@ const sanitizeHeadingLevel = (
   return VALID_HEADINGS.includes(heading) ? heading : fallback;
 };
 
-const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (props) => {
+export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
+  props,
+) => {
   const { children, className, tag: tagProp, tagStyle: tagStyleProp } = props;
   const tag = sanitizeHeadingLevel(tagProp);
   const tagStyle = sanitizeHeadingLevel(tagStyleProp, tagProp);
@@ -53,5 +55,3 @@ const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (props) => {
 
   return React.createElement(tag, { className: combinedClassNames }, children);
 };
-
-export default Heading;

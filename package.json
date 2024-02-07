@@ -7,12 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pretty": "prettier --write ."
+    "pretty": "prettier --write .",
+    "checktypes": "tsc --noEmit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "next": "14.1.0",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1"

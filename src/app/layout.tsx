@@ -1,8 +1,14 @@
+import { Providers } from '@/components/Providers';
+import { fonts } from '@/styles/fonts';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '@/styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import '@/styles/globals.css';
+import { ReactNode } from 'react';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+// see docs: https://fontawesome.com/docs/web/use-with/react/use-with
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,11 +18,24 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-background text-foreground">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${fonts.cabin.variable} ${fonts.oswald.variable}`}
+    >
+      <body
+        suppressHydrationWarning
+        className="font-cabin bg-background text-base text-foreground"
+      >
+        <Providers>
+          <div className="bg-gradient-radial to-primary/40 min-h-screen from-transparent from-80%">
+            {children}
+          </div>
+        </Providers>
+      </body>
     </html>
   );
 }
