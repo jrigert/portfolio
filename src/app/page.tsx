@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-9">
-          <div className="flex min-h-screen w-full flex-col justify-center ">
+          <div className="flex min-h-screen w-full flex-col items-start justify-center">
             <Heading tag="h1" className="font-oswald text-primary">
               Jon Rigert
             </Heading>
@@ -30,9 +30,7 @@ export default function Home() {
               </p>
             </div>
 
-            <p>
-              Prefer a different theme? <ThemeToggle />
-            </p>
+            <ThemeToggle />
           </div>
           <div className="">Col 2</div>
         </div>

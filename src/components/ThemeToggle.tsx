@@ -30,8 +30,8 @@ export const ThemeToggle: FunctionComponent = () => {
   };
 
   return (
-    <Button size="icon" variant="outline" onClick={toggleTheme}>
-      <FontAwesomeIcon icon={icon} />
+    <Button variant="outline" color="loud" onClick={toggleTheme} icon={icon}>
+      Toggle Theme
     </Button>
   );
 };

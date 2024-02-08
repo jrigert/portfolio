@@ -31,7 +31,7 @@ export default function RootLayout({
         className="font-cabin bg-background text-base text-foreground"
       >
         <Providers>
-          <div className="bg-gradient-radial to-primary/40 min-h-screen from-transparent from-80%">
+          <div className="bg-gradient-radial to-primary/15 min-h-screen from-transparent from-80%">
             {children}
           </div>
         </Providers>
