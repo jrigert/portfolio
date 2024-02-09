@@ -1,4 +1,4 @@
-import { Cabin, Oswald } from 'next/font/google';
+import { Cabin, Source_Code_Pro } from 'next/font/google';
 
 const cabin = Cabin({
   subsets: ['latin'],
@@ -6,13 +6,13 @@ const cabin = Cabin({
   variable: '--font-cabin',
 });
 
-const oswald = Oswald({
+const sourceCode = Source_Code_Pro({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-oswald',
+  variable: '--font-source-code',
 });
 
 export const fonts = {
   cabin,
-  oswald,
+  sourceCode,
 };

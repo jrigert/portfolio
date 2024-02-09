@@ -16,16 +16,14 @@ export type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
   extends Omit<
-    DetailedHTMLProps<
-      ButtonHTMLAttributes<HTMLButtonElement>,
-      HTMLButtonElement
+      DetailedHTMLProps<
+        ButtonHTMLAttributes<HTMLButtonElement>,
+        HTMLButtonElement
+      >,
+      'color'
     >,
-    'color'
-  > {
+    ButtonVariantProps {
   icon?: IconDefinition;
-  color?: ButtonVariantProps['color'];
-  variant?: ButtonVariantProps['variant'];
-  size?: ButtonVariantProps['size'];
 }
 
 const buttonVariants = cva(
@@ -45,7 +43,7 @@ const buttonVariants = cva(
       },
       size: {
         medium: ['px-5 py-1'],
-        icon: ['py-0.5 w-9  text-xl'],
+        icon: ['py-0.5 w-9', 'text-xl', 'rounded-full'],
       },
     },
     compoundVariants: [
@@ -83,14 +81,19 @@ export const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = (
     props;
 
   const combinedClassNames = useMemo(() => {
-    const buttonClassNames = buttonVariants({ size, variant, color });
-    return classNames(buttonClassNames, className);
+    const variantClassNames = buttonVariants({ size, variant, color });
+    return classNames(variantClassNames, className);
   }, [className, size, variant, color]);
 
   return (
     <button className={combinedClassNames} {...buttonProps}>
       {children}
-      {icon ? <FontAwesomeIcon icon={icon} className="ml-3" /> : null}
+      {icon ? (
+        <FontAwesomeIcon
+          icon={icon}
+          className={classNames({ 'ml-3': size !== 'icon' })}
+        />
+      ) : null}
     </button>
   );
 };

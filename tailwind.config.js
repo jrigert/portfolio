@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         cabin: ['var(--font-cabin)'],
-        oswald: ['var(--font-oswald)'],
+        'source-code': ['var(--font-source-code)'],
       },
       colors: {
         background: 'rgba(var(--background), <alpha-value>)',
@@ -28,6 +28,10 @@ module.exports = {
         loud: {
           DEFAULT: 'rgba(var(--loud), <alpha-value>)',
           foreground: 'rgba(var(--loud-foreground), <alpha-value>)',
+        },
+        gray: {
+          DEFAULT: 'rgba(var(--gray), <alpha-value>)',
+          foreground: 'rgba(var(--gray-foreground), <alpha-value>)',
         },
       },
       backgroundImage: {

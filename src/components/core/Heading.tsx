@@ -7,17 +7,21 @@ import React, { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 export const VALID_HEADINGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
 export type HeadingLevel = (typeof VALID_HEADINGS)[number];
 
-export interface HeadingProps extends WithClassName {
+export interface HeadingProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLHeadingElement>,
+    HTMLHeadingElement
+  > {
   tag: HeadingLevel;
   tagStyle?: HeadingLevel;
 }
 
 export type HeadingVariantProps = VariantProps<typeof headingVariants>;
 
-const headingVariants = cva(['font-bold'], {
+const headingVariants = cva(['font-bold font-source-code'], {
   variants: {
     level: {
-      h1: ['text-5xl', 'mb-6'],
+      h1: ['text-5xl', 'mb-6', 'text-primary'],
       h2: ['text-4xl', 'mb-4'],
       h3: ['text-3xl', 'mb-3'],
       h4: ['text-2xl', 'mb-2'],
@@ -44,7 +48,13 @@ const sanitizeHeadingLevel = (
 export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
   props,
 ) => {
-  const { children, className, tag: tagProp, tagStyle: tagStyleProp } = props;
+  const {
+    children,
+    className,
+    tag: tagProp,
+    tagStyle: tagStyleProp,
+    ...headingPrpos
+  } = props;
   const tag = sanitizeHeadingLevel(tagProp);
   const tagStyle = sanitizeHeadingLevel(tagStyleProp, tagProp);
 
@@ -53,5 +63,9 @@ export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
     return classNames(headingClassNames, className);
   }, [className, tagStyle]);
 
-  return React.createElement(tag, { className: combinedClassNames }, children);
+  return React.createElement(
+    tag,
+    { className: combinedClassNames, ...headingPrpos },
+    children,
+  );
 };

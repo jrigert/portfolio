@@ -9,6 +9,8 @@
     --green: 77, 139, 49;
     --orange: 255, 132, 39;
     --black: 18, 3, 5;
+    --gray: 49, 47, 47;
+    --gray-foreground: var(--white);
 
     --background: var(--white);
     --foreground: var(--black);
@@ -26,5 +28,11 @@
   [data-theme='dark'] {
     --background: var(--black);
     --foreground: var(--white);
+  }
+}
+
+@layer components {
+  .nav-link-underline {
+    @apply after:absolute after:left-0 after:bottom-0 after:w-full after:bg-primary after:h-0.5;
   }
 }
