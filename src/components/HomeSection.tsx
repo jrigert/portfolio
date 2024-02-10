@@ -18,7 +18,7 @@ export const HomeSection: FunctionComponent<HomeSectionProps> = (props) => {
 
   const containerClassNames = useMemo(
     () => classNames({ 'scroll-mt-14': offsetScroll }, className),
-    [],
+    [className],
   );
 
   return (

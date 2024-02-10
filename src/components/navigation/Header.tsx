@@ -7,7 +7,7 @@ import type { FunctionComponent } from 'react';
 export const Header: FunctionComponent = () => {
   return (
     <>
-      <header className="fixed left-0 top-0 w-full bg-background shadow-lg shadow-primary">
+      <header className="fixed left-0 top-0 z-10 w-full bg-background shadow-lg shadow-primary">
         <Container className={`flex h-14 items-center justify-between`}>
           <Link
             href="#about"
