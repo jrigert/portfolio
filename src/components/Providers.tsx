@@ -5,5 +5,5 @@ import { FunctionComponent, PropsWithChildren } from 'react';
 
 export const Providers: FunctionComponent<PropsWithChildren> = (props) => {
   const { children } = props;
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
 };

@@ -53,7 +53,7 @@ export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
     className,
     tag: tagProp,
     tagStyle: tagStyleProp,
-    ...headingPrpos
+    ...headingProps
   } = props;
   const tag = sanitizeHeadingLevel(tagProp);
   const tagStyle = sanitizeHeadingLevel(tagStyleProp, tagProp);
@@ -65,7 +65,7 @@ export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
 
   return React.createElement(
     tag,
-    { className: combinedClassNames, ...headingPrpos },
+    { className: combinedClassNames, ...headingProps },
     children,
   );
 };

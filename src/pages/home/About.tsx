@@ -10,8 +10,8 @@ import type { FunctionComponent } from 'react';
 export const HomeAbout: FunctionComponent = () => {
   const animate = useAnimate();
   const animationClass = animate
-    ? 'transition opacity-100 duration-500 ease-in'
-    : 'transition opacity-50';
+    ? 'transition-opacity opacity-100 duration-500 ease-in'
+    : 'transition-opacity opacity-50';
 
   return (
     <HomeSection

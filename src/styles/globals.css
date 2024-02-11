@@ -25,7 +25,7 @@
     --loud-foreground: var(--white);
   }
 
-  [data-theme='dark'] {
+  html.dark {
     --background: var(--black);
     --foreground: var(--white);
   }
