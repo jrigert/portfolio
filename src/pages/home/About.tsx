@@ -2,50 +2,64 @@
 
 import { Heading } from '@/components/core/Heading';
 import { ImageCircle } from '@/components/core/ImageCircle';
-import { HomeSection } from '@/components/HomeSection';
+import { PageSection } from '@/components/PageSection';
 import { useAnimate } from '@/hooks/useAnimate';
-import { classNames } from '@/utils/style';
+import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';
+
+const headingSharedClasses = 'transition duration-[1500ms] ease-out';
+const h2Classes = getHeadingClasses({ level: 'h2' });
 
 export const HomeAbout: FunctionComponent = () => {
   const animate = useAnimate();
-  const animationClass = animate
-    ? 'transition-opacity opacity-100 duration-500 ease-in'
-    : 'transition-opacity opacity-50';
+
+  const h1AnimationClass = animate
+    ? 'opacity-100 translate-x-0'
+    : 'opacity-0 -translate-x-16';
+
+  const h2AnimationClass = animate
+    ? 'opacity-100 translate-x-0'
+    : 'opacity-0 translate-x-16';
+
+  const dividerAnimationClass = animate
+    ? 'opacity-100 scale-y-100'
+    : 'opacity-0 scale-y-0';
 
   return (
-    <HomeSection
-      className={classNames(
-        'mt-12 flex w-full flex-shrink-0 flex-col items-center justify-center',
-        animationClass,
-      )}
+    <PageSection
+      className="mt-12 flex flex-shrink-0 flex-col items-center justify-center"
       id="about"
       offsetScroll={false}
     >
-      <ImageCircle src="/images/me.jpeg" alt="A picture of me, Jon Rigert" />
+      <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
 
-      <Heading tag="h1" className="relative mt-4">
+      <Heading
+        tag="h1"
+        className={classNames(
+          headingSharedClasses,
+          'relative mb-0 mt-10',
+          h1AnimationClass,
+        )}
+      >
         Jon Rigert
       </Heading>
 
-      <div className="text-center text-xl">
-        <p>
-          Hi, I&#39;m Jon! I am a web developer/architect, passionate about
-          frontend development
-        </p>
-        <p className="font-source-code my-4 text-base font-extrabold">
-          <span className="text-primary">
-            Director, Web Application Development
-          </span>{' '}
-          at{' '}
-          <a
-            href="https://www.bounteous.com"
-            className="text-primary underline"
-          >
-            Bounteous
-          </a>
-        </p>
-      </div>
-    </HomeSection>
+      <hr
+        className={classNames(
+          'border-y-foreground/30 mb-6 mt-7 h-1.5 w-48 border-x-0 border-y transition duration-1000',
+          dividerAnimationClass,
+        )}
+      />
+
+      <p
+        className={classNames(
+          h2Classes,
+          headingSharedClasses,
+          h2AnimationClass,
+        )}
+      >
+        Web Developer / Architect
+      </p>
+    </PageSection>
   );
 };

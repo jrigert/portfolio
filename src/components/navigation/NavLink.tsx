@@ -25,7 +25,7 @@ export const NavLink: FunctionComponent<NavLinkProps> = (props) => {
   const linkClassNames = useMemo(
     () =>
       classNames(
-        'relative opacity-80 hover:nav-link-underline hover:opacity-100',
+        'relative opacity-80 hover:nav-link-underline hover:opacity-100 tracking-widest',
         {
           'nav-link-underline opacity-100': isActive,
         },

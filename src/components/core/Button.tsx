@@ -35,6 +35,8 @@ const buttonVariants = cva(
         outline: ['border-2 rounded-xl'],
       },
       color: {
+        default: ['bg-foreground', 'text-background', 'hover:bg-foreground/80'],
+        ['default-on-dark']: ['bg-white', 'text-black', 'hover:bg-white/80'],
         primary: ['bg-primary text-primary-foreground hover:bg-primary/80'],
         secondary: [
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
@@ -47,6 +49,18 @@ const buttonVariants = cva(
       },
     },
     compoundVariants: [
+      {
+        variant: 'outline',
+        color: 'default',
+        className:
+          'border-foreground/90 text-foreground hover:bg-foreground/10 hover:border-foreground bg-transparent',
+      },
+      {
+        variant: 'outline',
+        color: 'default-on-dark',
+        className:
+          'border-white/90 text-white hover:bg-white/10 hover:border-white bg-transparent',
+      },
       {
         variant: 'outline',
         color: 'primary',
@@ -68,7 +82,7 @@ const buttonVariants = cva(
     ],
     defaultVariants: {
       variant: 'solid',
-      color: 'primary',
+      color: 'default',
       size: 'medium',
     },
   },

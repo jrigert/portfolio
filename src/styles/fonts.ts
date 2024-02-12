@@ -1,18 +1,18 @@
-import { Cabin, Source_Code_Pro } from 'next/font/google';
+import { Space_Grotesk, Oswald } from 'next/font/google';
 
-const cabin = Cabin({
+const body = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cabin',
+  variable: '--font-body',
 });
 
-const sourceCode = Source_Code_Pro({
+const heading = Oswald({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-source-code',
+  variable: '--font-heading',
 });
 
 export const fonts = {
-  cabin,
-  sourceCode,
+  body,
+  heading,
 };

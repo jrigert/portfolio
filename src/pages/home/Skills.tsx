@@ -1,11 +1,11 @@
 import { Heading } from '@/components/core/Heading';
-import { HomeSection } from '@/components/HomeSection';
+import { PageSection } from '@/components/PageSection';
 import type { FunctionComponent } from 'react';
 
 export const HomeSkills: FunctionComponent = () => {
   return (
-    <HomeSection id="skills">
+    <PageSection id="skills">
       <Heading tag="h1">Skills</Heading>
-    </HomeSection>
+    </PageSection>
   );
 };

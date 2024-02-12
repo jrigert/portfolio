@@ -8,12 +8,14 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        cabin: ['var(--font-cabin)'],
-        'source-code': ['var(--font-source-code)'],
+        body: ['var(--font-body)'],
+        heading: ['var(--font-heading)'],
       },
       colors: {
         background: 'rgba(var(--background), <alpha-value>)',
         foreground: 'rgba(var(--foreground), <alpha-value>)',
+        white: 'rgba(var(--white), <alpha-value>)',
+        black: 'rgba(var(--black), <alpha-value>)',
         primary: {
           DEFAULT: 'rgba(var(--primary), <alpha-value>)',
           foreground: 'rgba(var(--primary-foreground), <alpha-value>)',

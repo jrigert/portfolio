@@ -1,6 +1,6 @@
 .image-circle {
   --s: 16px;  /* size of the frame */
-  --b: 6px;   /* border thickness */
+  --b: 4px;   /* border thickness */
   --w: 300px; /* width of the image */
 
   width: var(--w);
@@ -24,13 +24,12 @@
   clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
   transition: .4s;
   cursor: pointer;
-  border-radius: 20px;
 }
 
 .image-circle.animate {
   outline-offset: 2px;
   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
   --_p: calc(var(--s)/4);
-  transition:  .3s, background-position .3s .35s;
+  transition:  .3s, background-position .3s .25s;
 }
 

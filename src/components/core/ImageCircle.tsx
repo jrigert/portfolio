@@ -12,9 +12,19 @@ export interface ImageCircleProps
 export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
   const { hasLoaded, onLoad } = useHasLoaded();
   const animationClass = hasLoaded ? styles['animate'] : undefined;
+  const containerClass = hasLoaded ? 'opacity-100' : 'opacity-0';
 
   return (
-    <div className="relative h-64 w-64 overflow-clip">
+    <div
+      className={classNames(
+        'relative h-52 w-52 overflow-clip opacity-0',
+        containerClass,
+      )}
+    >
+      <div className="absolute h-full w-full p-4">
+        <div className="h-full w-full rounded-xl bg-primary opacity-15" />
+      </div>
+
       <Image
         className={classNames(styles['image-circle'], animationClass)}
         onLoad={onLoad}
