@@ -20,6 +20,7 @@ module.exports = {
           'rgba(var(--foreground-secondary), <alpha-value>)',
         white: 'rgba(var(--white), <alpha-value>)',
         black: 'rgba(var(--black), <alpha-value>)',
+        ['cyan-light']: 'rgba(var(--cyan-light), <alpha-value>)',
         primary: {
           DEFAULT: 'rgba(var(--primary), <alpha-value>)',
           foreground: 'rgba(var(--primary-foreground), <alpha-value>)',

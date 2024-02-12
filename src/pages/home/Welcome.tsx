@@ -9,7 +9,7 @@ import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';
 
 const headingSharedClasses = 'transition duration-[1500ms] ease-out';
-const h2Classes = getHeadingClasses({ level: 'h2' });
+const subHeadingClasses = getHeadingClasses({ level: 'h3' });
 
 export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
@@ -47,14 +47,14 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <hr
         className={classNames(
-          'border-y-foreground/30 mb-6 mt-7 h-1.5 w-48 border-x-0 border-y transition duration-1000',
+          'border-y-foreground/30 mb-6 mt-8 h-1.5 w-48 border-x-0 border-y transition duration-1000',
           dividerAnimationClass,
         )}
       />
 
       <p
         className={classNames(
-          h2Classes,
+          subHeadingClasses,
           headingSharedClasses,
           h2AnimationClass,
         )}
