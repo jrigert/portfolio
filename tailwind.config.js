@@ -14,6 +14,10 @@ module.exports = {
       colors: {
         background: 'rgba(var(--background), <alpha-value>)',
         foreground: 'rgba(var(--foreground), <alpha-value>)',
+        ['background-secondary']:
+          'rgba(var(--background-secondary), <alpha-value>)',
+        ['foreground-secondary']:
+          'rgba(var(--foreground-secondary), <alpha-value>)',
         white: 'rgba(var(--white), <alpha-value>)',
         black: 'rgba(var(--black), <alpha-value>)',
         primary: {

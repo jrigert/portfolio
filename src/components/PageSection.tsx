@@ -5,6 +5,7 @@ import { FunctionComponent, useMemo } from 'react';
 export interface HomeSectionProps extends ContainerProps {
   id: string;
   offsetScroll?: boolean;
+  wrapperClassName?: string;
 }
 
 export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
@@ -13,6 +14,7 @@ export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
     children,
     className,
     offsetScroll = true,
+    wrapperClassName,
     ...containerProps
   } = props;
 
@@ -22,13 +24,15 @@ export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
   );
 
   return (
-    <Container
-      fullHeight
-      id={id}
-      className={containerClassNames}
-      {...containerProps}
-    >
-      {children}
-    </Container>
+    <div className={wrapperClassName}>
+      <Container
+        fullHeight
+        id={id}
+        className={containerClassNames}
+        {...containerProps}
+      >
+        {children}
+      </Container>
+    </div>
   );
 };

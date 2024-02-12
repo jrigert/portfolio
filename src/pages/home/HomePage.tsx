@@ -1,14 +1,16 @@
-import { HomeAbout } from '@/pages/home/About';
-import { HomeExperience } from '@/pages/home/Experience';
-import { HomeSkills } from '@/pages/home/Skills';
+import { HOMEPAGE_CONFIG } from '@/config/homepage';
 import type { FunctionComponent } from 'react';
+
+const { sections } = HOMEPAGE_CONFIG;
 
 export const HomePage: FunctionComponent = () => {
   return (
     <main>
-      <HomeAbout />
-      <HomeSkills />
-      <HomeExperience />
+      {sections.map(({ id, Component }) => (
+        <section key={id}>
+          <Component id={id} />
+        </section>
+      ))}
     </main>
   );
 };

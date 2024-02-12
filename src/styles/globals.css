@@ -15,6 +15,9 @@
     --background: var(--white);
     --foreground: var(--black);
 
+    --background-secondary: var(--white);
+    --foreground-secondary: var(--black);
+
     --primary: var(--cyan);
     --primary-foreground: var(--white);
 
@@ -28,6 +31,9 @@
   html.dark {
     --background: var(--black);
     --foreground: var(--white);
+
+    --background-secondary: var(--gray);
+    --foreground-secondary: var(--gray-foreground);
   }
 }
 

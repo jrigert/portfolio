@@ -1,9 +1,12 @@
 import { Container } from '@/components/core/Container';
 import { NavLink } from '@/components/navigation/NavLink';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { HOMEPAGE_CONFIG } from '@/config/homepage';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { FunctionComponent } from 'react';
+
+const { sections } = HOMEPAGE_CONFIG;
 
 export const Header: FunctionComponent = () => {
   return (
@@ -11,17 +14,28 @@ export const Header: FunctionComponent = () => {
       <header className="bg-gray fixed left-0 top-0 z-10 w-full text-white shadow-xl shadow-black/40 dark:shadow-lg dark:shadow-white/30">
         <Container className={`flex h-14 items-center justify-between`}>
           <Link
-            href="#about"
+            href={`/#${sections[0].id}`}
             className="font-heading text-2xl font-bold text-primary"
           >
-            <Image src="/images/logo.svg" alt="JR" width={70} height={33} />
+            <Image
+              src="/images/logo.svg"
+              alt="JR: Click to return home"
+              width={70}
+              height={33}
+            />
           </Link>
 
           <nav>
             <ul className="font-heading flex">
-              <NavLink href="#about" label="About Me" showDivider isActive />
-              <NavLink href="#skills" label="Skills" showDivider />
-              <NavLink href="#experience" label="Experience" />
+              {HOMEPAGE_CONFIG.sections.map(({ id, linkLabel }, index) => (
+                <NavLink
+                  key={id}
+                  href={`/#${id}`}
+                  label={linkLabel}
+                  showDivider={index !== sections.length - 1}
+                  isActive={index === 0} // TODO actual logic
+                />
+              ))}
             </ul>
           </nav>
 
