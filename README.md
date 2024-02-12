@@ -6,6 +6,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Active nav item highlighting
 - Something fun on image hover?
 - prefers reduced motion
+- github, linkedin, email, etc
+- pdf resume?
 
 ## Getting Started
 

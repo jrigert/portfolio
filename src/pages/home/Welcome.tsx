@@ -4,7 +4,7 @@ import { Heading } from '@/components/core/Heading';
 import { ImageCircle } from '@/components/core/ImageCircle';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
-import { useAnimate } from '@/hooks/useAnimate';
+import { useAnimate } from '@/hooks/animation/useAnimate';
 import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
 import { Heading } from '@/components/core/Heading';
-import { useEnterAnimation } from '@/hooks/useEnterAnimation';
+import { useEnterAnimation } from '@/hooks/animation/useEnterAnimation';
 import { classNames } from '@/utils/style';
 import { FunctionComponent } from 'react';
 

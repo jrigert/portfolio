@@ -1,10 +1,11 @@
 'use client';
 
 import { Badge } from '@/components/core/Badge';
+import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Heading } from '@/components/core/Heading';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
-import { useEnterAnimation } from '@/hooks/useEnterAnimation';
+import { useEnterAnimation } from '@/hooks/animation/useEnterAnimation';
 import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames } from '@/utils/style';
 import {
@@ -39,9 +40,8 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
         ref={registerBodyRef}
       >
         <p>
-          Hi! I&rsquo;m <strong>Jon</strong>. I am a{' '}
-          <strong>web developer, architect, team lead</strong> and{' '}
-          <strong>director</strong>. With <strong>over a decade</strong> of
+          Hi! I&rsquo;m <strong>Jon</strong>. I am a web developer, architect,
+          team lead and director. With <strong>over a decade</strong> of
           experience building web applications, I love creating usable web
           applications with <strong>clean</strong> and
           <strong> scalable</strong> code.
@@ -53,17 +53,19 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
         </p>
       </div>
 
-      <Heading tag="h3" className="mb-6 mt-20 text-center">
-        Personal Info
-      </Heading>
+      <FadeInContainer>
+        <Heading tag="h3" className="mb-6 mt-20 text-center">
+          Personal Info
+        </Heading>
 
-      <ul className="flex flex-wrap justify-center gap-6">
-        <Badge icon={faBaby} label="Father" />
-        <Badge icon={faDog} label="Dog Dad" />
-        <Badge icon={faGamepad} label="Gamer" />
-        <Badge icon={faBook} label="Reader" />
-        <Badge icon={faDumbbell} label="Weightlifter" />
-      </ul>
+        <ul className="flex flex-wrap justify-center gap-6">
+          <Badge icon={faBaby} label="Father" />
+          <Badge icon={faDog} label="Dog Dad" />
+          <Badge icon={faGamepad} label="Gamer" />
+          <Badge icon={faBook} label="Reader" />
+          <Badge icon={faDumbbell} label="Weightlifter" />
+        </ul>
+      </FadeInContainer>
     </PageSection>
   );
 };
