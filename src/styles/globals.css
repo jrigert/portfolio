@@ -44,4 +44,12 @@
   .nav-link-underline {
     @apply after:absolute after:left-0 after:bottom-0 after:w-full after:bg-cyan-light after:h-0.5;
   }
+
+  .vertical-spacing > * {
+    @apply mb-7;
+  }
+
+  .highlight-strong strong {
+    @apply text-primary;
+  }
 }

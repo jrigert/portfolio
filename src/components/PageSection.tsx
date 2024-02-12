@@ -20,17 +20,12 @@ export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
 
   const containerClassNames = useMemo(
     () => classNames({ 'scroll-mt-14': offsetScroll }, className),
-    [className],
+    [className, offsetScroll],
   );
 
   return (
     <div className={wrapperClassName}>
-      <Container
-        fullHeight
-        id={id}
-        className={containerClassNames}
-        {...containerProps}
-      >
+      <Container id={id} className={containerClassNames} {...containerProps}>
         {children}
       </Container>
     </div>

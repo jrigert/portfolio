@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Clean up image animation
 - Active nav item highlighting
 - Something fun on image hover?
+- prefers reduced motion
 
 ## Getting Started
 

@@ -11,6 +11,7 @@ export const VerticalDivider: FunctionComponent<VerticalDividerProps> = (
 
   return (
     <span
+      aria-hidden
       className={classNames(
         'mx-4 inline-block h-4 w-1 border-r border-r-gray-400',
         className,

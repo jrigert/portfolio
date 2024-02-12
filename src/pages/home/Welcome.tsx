@@ -2,6 +2,7 @@
 
 import { Heading } from '@/components/core/Heading';
 import { ImageCircle } from '@/components/core/ImageCircle';
+import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
 import { useAnimate } from '@/hooks/useAnimate';
 import { HomePageSectionProps } from '@/pages/home/index';
@@ -14,6 +15,7 @@ const subHeadingClasses = getHeadingClasses({ level: 'h3' });
 export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
   const animate = useAnimate();
+  const Divider = <VerticalDivider className="mt-1 h-6 border-r-primary" />;
 
   const h1AnimationClass = animate
     ? 'opacity-100 translate-x-0'
@@ -31,6 +33,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
     <PageSection
       className="mt-12 flex flex-shrink-0 flex-col items-center justify-center"
       id={id}
+      fullHeight
     >
       <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
 
@@ -47,19 +50,21 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <hr
         className={classNames(
-          'border-y-foreground/30 mb-6 mt-8 h-1.5 w-48 border-x-0 border-y transition duration-1000',
+          'mb-6 mt-8 h-1.5 w-48 border-x-0 border-y border-y-foreground/30 transition duration-1000',
           dividerAnimationClass,
         )}
       />
 
       <p
+        aria-label="Web Developer, Architect and Director"
         className={classNames(
           subHeadingClasses,
+          'flex items-center text-center',
           headingSharedClasses,
           h2AnimationClass,
         )}
       >
-        Web Developer / Architect
+        Web Developer {Divider} Architect {Divider} Director
       </p>
     </PageSection>
   );
