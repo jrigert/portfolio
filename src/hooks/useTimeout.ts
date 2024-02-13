@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 type Timer = ReturnType<typeof setTimeout>;
 
-export const useTimeout = (handler: any, duration = 0) => {
+export const useTimeout = (handler: () => void, duration = 0) => {
   const timeoutHandlerRef = useRef<Timer | undefined>();
 
   const clear = () => {
