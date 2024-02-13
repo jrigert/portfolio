@@ -1,5 +1,5 @@
 import { Header } from '@/components/navigation/Header';
-import { Providers } from '@/components/Providers';
+import { Providers } from '@/components/providers/Providers';
 import { fonts } from '@/styles/fonts';
 import { classNames } from '@/utils/style';
 import type { Metadata } from 'next';
@@ -32,7 +32,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="font-body bg-background text-base text-foreground"
+        className="bg-background font-body text-base text-foreground"
       >
         <Providers>
           <div className="min-h-screen">

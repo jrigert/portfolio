@@ -63,7 +63,7 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
           <Badge icon={faDog} label="Dog Dad" />
           <Badge icon={faGamepad} label="Gamer" />
           <Badge icon={faBook} label="Reader" />
-          <Badge icon={faDumbbell} label="Weightlifter" />
+          <Badge icon={faDumbbell} label="Fitness" />
         </ul>
       </FadeInContainer>
     </PageSection>

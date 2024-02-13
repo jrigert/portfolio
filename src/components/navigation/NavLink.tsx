@@ -1,26 +1,26 @@
+'use client';
+
 import { VerticalDivider } from '@/components/core/VerticalDivider';
+import { useScrollContext } from '@/hooks/scroll/useScrollContext';
 import { classNames } from '@/utils/style';
 import Link from 'next/link';
 import { FunctionComponent, useMemo } from 'react';
 
 export interface NavLinkProps {
   href: string;
+  id: string;
   label: string;
-  isActive?: boolean;
   dividerClassName?: string;
   linkClassName?: string;
   showDivider?: boolean;
 }
 
 export const NavLink: FunctionComponent<NavLinkProps> = (props) => {
-  const {
-    href,
-    isActive,
-    label,
-    dividerClassName,
-    linkClassName,
-    showDivider,
-  } = props;
+  const { href, id, label, dividerClassName, linkClassName, showDivider } =
+    props;
+
+  const { activeSection } = useScrollContext();
+  const isActive = activeSection === id;
 
   const linkClassNames = useMemo(
     () =>
