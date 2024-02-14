@@ -20,7 +20,7 @@ export const SkillCard: FunctionComponent<SkillCardProps> = (props) => {
         className,
       )}
     >
-      <p className="text-xl text-primary">
+      <p className="font-heading text-xl text-primary">
         {icon ? <FontAwesomeIcon icon={icon} className="mr-3" /> : null}
         {title}
       </p>

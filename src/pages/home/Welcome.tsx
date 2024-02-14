@@ -1,6 +1,7 @@
 'use client';
 
 import { Heading } from '@/components/core/Heading';
+import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import { ImageCircle } from '@/components/core/ImageCircle';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
@@ -48,9 +49,9 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         Jon Rigert
       </Heading>
 
-      <hr
+      <HorizontalDivider
         className={classNames(
-          'mb-6 mt-8 h-1.5 w-48 border-x-0 border-y border-y-foreground/30 transition duration-1000',
+          'mb-6 mt-8 transition duration-1000',
           dividerAnimationClass,
         )}
       />

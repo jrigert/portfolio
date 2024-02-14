@@ -11,7 +11,7 @@ const { sections } = HOMEPAGE_CONFIG;
 export const Header: FunctionComponent = () => {
   return (
     <>
-      <header className="fixed left-0 top-0 z-10 w-full bg-gray text-white shadow-xl shadow-black/40 dark:shadow-lg dark:shadow-white/30">
+      <header className="fixed left-0 top-0 z-10 w-full bg-gray text-white shadow-xl shadow-black/40">
         <Container className={`flex h-14 items-center justify-between`}>
           <Link
             href={`/#${sections[0].id}`}

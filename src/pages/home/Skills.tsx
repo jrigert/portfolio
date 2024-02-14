@@ -1,5 +1,8 @@
 'use client';
 
+import { FadeInContainer } from '@/components/animation/FadeInContainer';
+import { Heading } from '@/components/core/Heading';
+import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { SkillCard, SkillCardProps } from '@/components/SkillCard';
@@ -11,6 +14,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import {
   faDatabase,
   faKey,
+  faNetworkWired,
   faPaintbrush,
   faToolbox,
 } from '@fortawesome/free-solid-svg-icons';
@@ -24,17 +28,17 @@ const SKILLS: SkillCardProps[] = [
   },
   {
     title: 'React',
-    description: 'NextJS, Functional Programming',
+    description: 'NextJS, Functional Programming, React Native',
     icon: faReact,
   },
   {
     title: 'State Management',
-    description: 'Redux, Zustand, Context API',
+    description: 'Redux, Context API',
     icon: faDatabase,
   },
   {
     title: 'API Integration',
-    description: 'Apollo, react-query',
+    description: 'Apollo Client, react-query',
     icon: faDatabase,
   },
   {
@@ -47,6 +51,37 @@ const SKILLS: SkillCardProps[] = [
     description: 'CSS, SASS, Tailwind',
     icon: faPaintbrush,
   },
+  {
+    title: 'API Development',
+    description: 'NodeJS, Apollo Server',
+    icon: faNetworkWired,
+  },
+  {
+    title: 'Databases',
+    description: 'SQL, Mongo',
+    icon: faDatabase,
+  },
+  {
+    title: 'CMS',
+    description: 'Drupal, Contentful, Builder.io',
+    icon: faDatabase,
+  },
+  {
+    title: 'CI/CD',
+    description: 'GitHub Actions, Bitbucket Pipelines, Azure Dev Ops, Jenkins',
+    icon: faDatabase,
+  },
+];
+
+const ADDITIONAL_SKILLS = [
+  'Angular',
+  'AEM',
+  'ThreeJS',
+  'AWS',
+  'Vercel Hosting',
+  'Gatsby',
+  'Zustand',
+  'Fastlane',
 ];
 
 // time between when each item animation triggers
@@ -105,7 +140,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
       <PageSectionHeading title="Skills" />
 
       <div ref={registerRef}>
-        <ul className="mx-auto mt-16 grid max-w-xs auto-rows-fr grid-cols-1 gap-10 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
+        <ul className="mx-auto mt-16 grid max-w-xs grid-cols-1 gap-10 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
           {skills.map(({ containerClassName, ...props }) => (
             <li key={props.title} className={containerClassName}>
               <SkillCard {...props} className="h-full" />
@@ -113,6 +148,31 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
           ))}
         </ul>
       </div>
+
+      <FadeInContainer>
+        <HorizontalDivider className="mb-20 mt-32" />
+
+        <Heading tag="h3" className="mt-24 text-center">
+          Additional
+        </Heading>
+
+        <p className="mx-auto mt-8 max-w-3xl text-center">
+          Here are some more areas I have dabbled in. I am probably rusty, or
+          just not very experienced, so I did not want to list these as true
+          skills:
+        </p>
+
+        <ul className="mt-8 flex flex-wrap justify-center">
+          {ADDITIONAL_SKILLS.map((skill) => (
+            <li
+              key={skill}
+              className="my-3 -ml-px border-collapse border-x border-x-primary px-8 text-lg"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </FadeInContainer>
     </PageSection>
   );
 };
