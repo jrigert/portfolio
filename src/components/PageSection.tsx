@@ -9,18 +9,20 @@ import { FunctionComponent, useMemo, useRef } from 'react';
 // threshold for when section should be considered active (50% of screen)
 const ACTIVE_SCROLL_THRESHOLD = 0.5;
 
-export interface HomeSectionProps extends ContainerProps {
+export interface PageSectionProps extends ContainerProps {
   id: string;
   offsetScroll?: boolean;
+  variant?: 'standard' | 'secondary';
   wrapperClassName?: string;
 }
 
-export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
+export const PageSection: FunctionComponent<PageSectionProps> = (props) => {
   const {
     id,
     children,
     className,
     offsetScroll = true,
+    variant,
     wrapperClassName,
     ...containerProps
   } = props;
@@ -30,6 +32,15 @@ export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
   const containerClassNames = useMemo(
     () => classNames({ 'scroll-mt-14': offsetScroll }, className),
     [className, offsetScroll],
+  );
+
+  const wrapperClassNames = useMemo(
+    () =>
+      classNames(
+        { 'bg-background-secondary': variant === 'secondary' },
+        wrapperClassName,
+      ),
+    [variant, wrapperClassName],
   );
 
   const { setActiveSection } = useScrollContext();
@@ -56,7 +67,7 @@ export const PageSection: FunctionComponent<HomeSectionProps> = (props) => {
   });
 
   return (
-    <div className={wrapperClassName} ref={containerRef}>
+    <div className={wrapperClassNames} ref={containerRef}>
       <Container id={id} className={containerClassNames} {...containerProps}>
         {children}
       </Container>

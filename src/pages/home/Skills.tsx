@@ -85,7 +85,7 @@ const ADDITIONAL_SKILLS = [
 ];
 
 // time between when each item animation triggers
-const ANIMATION_INTERVAL_DURATION = 250;
+const ANIMATION_INTERVAL_DURATION = 150;
 
 interface SkillComponentData extends SkillCardProps {
   containerClassName?: string;
@@ -136,7 +136,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
   }, [lastAnimatedIndex]);
 
   return (
-    <PageSection id={id}>
+    <PageSection id={id} className="pb-20">
       <PageSectionHeading title="Skills" />
 
       <div ref={registerRef}>

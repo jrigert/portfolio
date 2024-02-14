@@ -19,7 +19,7 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
 
   return (
-    <PageSection id={id} wrapperClassName="bg-background-secondary pb-20">
+    <PageSection id={id} variant="secondary" wrapperClassName="pb-20">
       <PageSectionHeading title="About Me" />
 
       <FadeInContainer className="vertical-spacing highlight-strong mt-12 text-center text-xl">
