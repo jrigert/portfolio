@@ -18,7 +18,7 @@ import { FunctionComponent, useMemo, useState } from 'react';
 
 const SKILLS: SkillCardProps[] = [
   {
-    title: 'Essentials',
+    title: 'Fundamentals',
     description: 'JavaScript, CSS, HTML, Accessibility',
     icon: faKey,
   },
@@ -101,14 +101,14 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
   }, [lastAnimatedIndex]);
 
   return (
-    <PageSection id={id} fullHeight>
+    <PageSection id={id}>
       <PageSectionHeading title="Skills" />
 
       <div ref={registerRef}>
-        <ul className="mt-16 grid grid-cols-4 gap-10 text-center">
+        <ul className="mx-auto mt-16 grid max-w-xs auto-rows-fr grid-cols-1 gap-10 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
           {skills.map(({ containerClassName, ...props }) => (
             <li key={props.title} className={containerClassName}>
-              <SkillCard {...props} />
+              <SkillCard {...props} className="h-full" />
             </li>
           ))}
         </ul>
