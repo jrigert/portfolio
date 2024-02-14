@@ -6,17 +6,22 @@ import { classNames } from '@/utils/style';
 import { FunctionComponent } from 'react';
 
 export interface PageSectionHeadingProps {
+  /** defaults to vertical */
+  enterAnimation?: 'horizontal' | 'vertical';
   title: string;
 }
 
 export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
   props,
 ) => {
-  const { title } = props;
+  const { enterAnimation = 'vertical', title } = props;
 
   const { className: animationClassName, registerRef } = useEnterAnimation({
-    initialClassName: 'opacity-0 -translate-x-16',
-    enterClassName: 'opacity-100 translate-x-0',
+    initialClassName: classNames('opacity-0', {
+      '-translate-x-16': enterAnimation === 'horizontal',
+      'translate-y-8': enterAnimation === 'vertical',
+    }),
+    enterClassName: 'opacity-100 translate-x-0 translate-y-0',
   });
 
   return (
