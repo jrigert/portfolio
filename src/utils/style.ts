@@ -7,10 +7,10 @@ export const classNames = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 // --- Headings ---
 export type HeadingVariantProps = VariantProps<typeof headingVariants>;
 
-const headingVariants = cva(['font-bold font-heading tracking-widest'], {
+const headingVariants = cva(['font-bold font-heading'], {
   variants: {
     level: {
-      h1: ['text-7xl', 'mb-6', 'text-primary', 'tracking-[0.075em]'],
+      h1: ['text-7xl', 'mb-6', 'text-primary'],
       h2: ['text-5xl', 'mb-4'],
       h3: ['text-3xl', 'mb-3'],
       h4: ['text-2xl', 'mb-2'],

@@ -33,8 +33,10 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
           animationClassName,
         )}
       >
-        <Heading tag="h2">{title}</Heading>
-        <div className="h-2 w-[70%] bg-primary"></div>
+        <Heading tag="h2" className="mb-2">
+          {title}
+        </Heading>
+        <div className="h-1.5 w-[70%] rounded-b-xl bg-primary"></div>
       </div>
     </div>
   );
