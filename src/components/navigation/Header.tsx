@@ -11,7 +11,7 @@ const { sections } = HOMEPAGE_CONFIG;
 export const Header: FunctionComponent = () => {
   return (
     <>
-      <header className="fixed left-0 top-0 z-10 w-full bg-gray text-white shadow-xl shadow-black/40">
+      <header className="bg-dark-blue fixed left-0 top-0 z-10 w-full text-white shadow-xl shadow-black/40">
         <Container className={`flex h-14 items-center justify-between`}>
           <Link
             href={`/#${sections[0].id}`}
@@ -20,7 +20,7 @@ export const Header: FunctionComponent = () => {
             <Image
               src="/images/logo.svg"
               alt="JR: Click to return home"
-              width={70}
+              width={50}
               height={33}
             />
           </Link>

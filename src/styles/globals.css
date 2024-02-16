@@ -6,13 +6,15 @@
   :root {
     --white: 245, 245, 245;
     --cyan: 24, 90, 114;
-    --cyan-light: 33, 138, 175;
+    --cyan-light: 71, 180, 220;
     --cyan-lightest: 219, 236, 240;
     --green: 77, 139, 49;
     --orange: 255, 132, 39;
     --black: 22, 15, 15;
     --gray: 49, 47, 47;
     --gray-foreground: var(--white);
+    --dark-blue: 23, 29, 39;
+    --dark-blue-foreground: var(--white);
 
     --background: var(--white);
     --foreground: var(--black);
@@ -35,8 +37,8 @@
     --background: var(--black);
     --foreground: var(--white);
 
-    --background-secondary: var(--gray);
-    --foreground-secondary: var(--gray-foreground);
+    --background-secondary: var(--dark-blue);
+    --foreground-secondary: var(--dark-blue-foreground);
   }
 }
 

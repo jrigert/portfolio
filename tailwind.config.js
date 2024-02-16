@@ -41,6 +41,10 @@ module.exports = {
           DEFAULT: 'rgba(var(--gray), <alpha-value>)',
           foreground: 'rgba(var(--gray-foreground), <alpha-value>)',
         },
+        'dark-blue': {
+          DEFAULT: 'rgba(var(--dark-blue), <alpha-value>)',
+          foreground: 'rgba(var(--dark-blue-foreground), <alpha-value>)',
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
