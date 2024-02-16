@@ -43,7 +43,7 @@ export const HorizontalDivider: FunctionComponent<HorizontalDividerProps> = (
 
   const hrClassNames = useMemo(() => {
     return classNames(horizontalDividerVariants({ size, variant }), className);
-  }, [className, size, variant]);
+  }, [size, variant, className]);
 
   return <hr {...hrProps} className={hrClassNames} />;
 };

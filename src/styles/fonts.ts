@@ -1,4 +1,4 @@
-import { Space_Grotesk, Oswald } from 'next/font/google';
+import { Space_Grotesk, Quicksand as HeadingFont } from 'next/font/google';
 
 const body = Space_Grotesk({
   subsets: ['latin'],
@@ -6,7 +6,7 @@ const body = Space_Grotesk({
   variable: '--font-body',
 });
 
-const heading = Oswald({
+const heading = HeadingFont({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-heading',
