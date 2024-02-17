@@ -34,29 +34,33 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
 
   return (
     <div className="px-6 text-lg">
-      <Heading tag="h3" className="">
+      <Heading tag="h3" className="mb-2">
         {company}
       </Heading>
-      <div className="text-xl text-primary">{title}</div>
-      <div className="mt-4">
+      <div className="mb-2 font-heading text-xl font-bold text-primary">
+        {title}
+      </div>
+      <div className="font-heading">
         {startDate} - {endDate}
       </div>
-      <p className="mt-6">{description.join('. ')}</p>
+      <p className="mt-12 text-xl">{description.join('. ')}</p>
 
       {previousPositions ? (
-        <div className="mt-12">
-          <div className="font-bold">Previous Positions:</div>
-          {previousPositions.map(({ title, startDate, endDate }) => (
-            <div key={startDate} className="my-2 text-base">
-              {title} ({startDate} - {endDate})
-            </div>
-          ))}
+        <div className="mt-12 text-sm">
+          <div className="font-heading font-bold">Previous Positions:</div>
+
+          <ul className="max-w-screen-md">
+            {previousPositions.map(({ title, startDate, endDate }) => (
+              <li key={startDate} className="my-2 grid grid-cols-2 gap-10">
+                <span className="text-primary">{title}</span>
+                {startDate} - {endDate}
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
 
-      {showDivider ? (
-        <HorizontalDivider className="my-20 border-y-primary" />
-      ) : null}
+      {showDivider ? <HorizontalDivider className="my-20" /> : null}
     </div>
   );
 };

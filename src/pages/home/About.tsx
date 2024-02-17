@@ -22,7 +22,7 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
     <PageSection id={id} variant="secondary" wrapperClassName="pb-20">
       <PageSectionHeading title="About Me" />
 
-      <FadeInContainer className="vertical-spacing highlight-strong mt-12 text-center text-xl">
+      <FadeInContainer className="vertical-spacing highlight-strong mx-auto mt-20 max-w-screen-md text-xl">
         <p>
           Hi! I&rsquo;m <strong>Jon</strong>. I am a web developer, architect,
           team lead and director. With <strong>over a decade</strong> of
@@ -38,7 +38,7 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
       </FadeInContainer>
 
       <FadeInContainer>
-        <Heading tag="h3" className="mb-6 mt-20 text-center">
+        <Heading tag="h3" className="mb-6 mt-24 text-center">
           Personal Info
         </Heading>
 

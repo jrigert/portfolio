@@ -79,7 +79,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
     <PageSection id={id} fullHeight variant="secondary">
       <PageSectionHeading title="Experience" />
 
-      <FadeInContainer className="py-20">
+      <FadeInContainer className="mx-auto max-w-screen-lg py-20">
         {CARDS.map((card, index) => (
           <ExperienceCard
             key={card.company}

@@ -50,6 +50,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
       </Heading>
 
       <HorizontalDivider
+        color="foreground"
         className={classNames(
           'mb-6 mt-8 transition duration-1000',
           dividerAnimationClass,

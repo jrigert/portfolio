@@ -156,22 +156,24 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
           Additional
         </Heading>
 
-        <p className="mx-auto mt-8 max-w-3xl text-center">
-          Here are some more areas I have dabbled in. I am probably rusty, or
-          just not very experienced, so I did not want to list these as true
-          skills:
-        </p>
+        <div className="mx-auto max-w-screen-md">
+          <p className="mx-auto mt-8 max-w-3xl text-center">
+            Here are some more areas I have dabbled in. I am probably rusty, or
+            just not very experienced, so I did not want to list these as true
+            skills:
+          </p>
 
-        <ul className="mt-8 flex flex-wrap justify-center">
-          {ADDITIONAL_SKILLS.map((skill) => (
-            <li
-              key={skill}
-              className="my-3 -ml-px border-collapse border-x border-x-primary px-8 text-lg"
-            >
-              {skill}
-            </li>
-          ))}
-        </ul>
+          <ul className="mt-16 flex flex-wrap justify-center">
+            {ADDITIONAL_SKILLS.map((skill) => (
+              <li
+                key={skill}
+                className="-mx-px my-3 border-collapse border-x-2 border-x-primary px-8 text-lg hover:bg-primary/10"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
       </FadeInContainer>
     </PageSection>
   );
