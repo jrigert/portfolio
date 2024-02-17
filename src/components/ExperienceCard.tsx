@@ -1,3 +1,4 @@
+import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Heading } from '@/components/core/Heading';
 import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import type { FunctionComponent } from 'react';
@@ -33,7 +34,7 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
   } = props;
 
   return (
-    <div className="px-6 text-lg">
+    <FadeInContainer className="px-6 text-lg">
       <Heading tag="h3" className="mb-2">
         {company}
       </Heading>
@@ -61,6 +62,6 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
       ) : null}
 
       {showDivider ? <HorizontalDivider className="my-20" /> : null}
-    </div>
+    </FadeInContainer>
   );
 };

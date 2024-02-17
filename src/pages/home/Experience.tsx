@@ -79,7 +79,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
     <PageSection id={id} fullHeight variant="secondary">
       <PageSectionHeading title="Experience" />
 
-      <FadeInContainer className="mx-auto max-w-screen-lg py-20">
+      <div className="mx-auto max-w-screen-lg py-20">
         {CARDS.map((card, index) => (
           <ExperienceCard
             key={card.company}
@@ -87,7 +87,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
             showDivider={index < CARDS.length - 1}
           />
         ))}
-      </FadeInContainer>
+      </div>
     </PageSection>
   );
 };
