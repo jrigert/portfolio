@@ -5,6 +5,7 @@ import { Heading } from '@/components/core/Heading';
 import { Underline } from '@/components/core/Underline';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
+import { ResumePanel } from '@/components/ResumePanel';
 import { useAnimate } from '@/hooks/animation/useAnimate';
 import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
@@ -36,7 +37,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
   return (
     <PageSection
-      className="mt-6 flex flex-shrink-0 flex-col items-center justify-center"
+      className="mt-12 flex flex-shrink-0 flex-col items-center justify-center"
       id={id}
       fullHeight
     >
@@ -69,12 +70,16 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
           underlineAnimationClass,
         )}
       />
-      <ContactIcons
+
+      <div
         className={classNames(
           'duration-1500 mt-12 transition ease-out',
           iconsAnimationClass,
         )}
-      />
+      >
+        <ContactIcons />
+        <ResumePanel className="mt-12" />
+      </div>
     </PageSection>
   );
 };

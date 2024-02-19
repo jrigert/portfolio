@@ -11,6 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - pdf resume?
 - double check lint and types
 - mobile navigation
+- resume downloads
 
 ## Getting Started
 

@@ -7,6 +7,7 @@ import {
 } from '@/components/ExperienceCard';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
+import { ResumePanel } from '@/components/ResumePanel';
 import { HomePageSectionProps } from '@/pages/home/index';
 import type { FunctionComponent } from 'react';
 
@@ -76,7 +77,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
   const { id } = props;
 
   return (
-    <PageSection id={id} fullHeight variant="secondary">
+    <PageSection id={id} fullHeight variant="secondary" className="pb-20">
       <PageSectionHeading title="Experience" headingClassName="mb-3" />
 
       <div className="mx-auto max-w-screen-lg py-20">
@@ -87,6 +88,10 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
             showDivider={index < CARDS.length - 1}
           />
         ))}
+      </div>
+
+      <div className="flex justify-center">
+        <ResumePanel className="w-auto" />
       </div>
     </PageSection>
   );

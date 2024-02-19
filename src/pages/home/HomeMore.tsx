@@ -5,6 +5,7 @@ import { Badge } from '@/components/core/Badge';
 import { Heading } from '@/components/core/Heading';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
+import { ResumePanel } from '@/components/ResumePanel';
 import { HomePageSectionProps } from '@/pages/home/index';
 import {
   faBaby,
@@ -19,7 +20,7 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
 
   return (
-    <PageSection id={id}>
+    <PageSection id={id} className="pb-40">
       <PageSectionHeading title="More About Me" />
 
       <FadeInContainer>
@@ -53,6 +54,20 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           <Heading tag="h4">B.S. Game and Simulation Programming</Heading>
           <p className="text-primary">DeVry University</p>
           <p>2005 - 2009</p>
+        </div>
+      </FadeInContainer>
+
+      <FadeInContainer className="">
+        <Heading
+          tag="h3"
+          wrapperClassName="mb-6 mt-40 justify-center"
+          underline
+        >
+          Resume
+        </Heading>
+
+        <div className="mt-12 flex justify-center gap-8">
+          <ResumePanel buttonsOnly iconClassName="text-7xl" />
         </div>
       </FadeInContainer>
     </PageSection>
