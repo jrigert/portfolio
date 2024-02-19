@@ -25,7 +25,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
   return (
     <div
       className={classNames(
-        'relative h-56 w-56 overflow-hidden rounded-full outline outline-4 outline-offset-8 outline-foreground/70 transition duration-[2s] ease-out',
+        'duration-2000 relative h-56 w-56 overflow-hidden rounded-full outline outline-4 outline-offset-8 outline-foreground/70 transition ease-out',
         containerAnimationClass,
       )}
       ref={registerRef}

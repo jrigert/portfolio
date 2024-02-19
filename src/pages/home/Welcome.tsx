@@ -10,7 +10,7 @@ import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';
 
-const headingSharedClasses = 'transition duration-[1500ms] ease-out';
+const headingSharedClasses = 'transition duration-1500 ease-out';
 const subHeadingClasses = getHeadingClasses({ level: 'h3' });
 
 export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
@@ -65,13 +65,13 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <Underline
         className={classNames(
-          'mt-2 w-96 transition duration-[2s]',
+          'duration-2000 mt-2 w-96 transition',
           underlineAnimationClass,
         )}
       />
       <ContactIcons
         className={classNames(
-          'mt-12 transition duration-[2s]',
+          'duration-1500 mt-12 transition ease-out',
           iconsAnimationClass,
         )}
       />

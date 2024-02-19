@@ -49,6 +49,10 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       },
+      transitionDuration: {
+        1500: '1500ms',
+        2000: '2000ms',
+      },
     },
   },
   plugins: [],
