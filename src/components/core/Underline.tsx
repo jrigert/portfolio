@@ -2,9 +2,11 @@ import { WithClassName } from '@/types/props';
 import { classNames } from '@/utils/style';
 import type { FunctionComponent } from 'react';
 
+export type UnderlineVariant = 'skinny' | 'medium';
+
 export interface UnderlineProps extends WithClassName {
   /** defaults to medium */
-  variant?: 'skinny' | 'medium';
+  variant?: UnderlineVariant;
 }
 
 export const Underline: FunctionComponent<UnderlineProps> = (props) => {

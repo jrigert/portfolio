@@ -151,17 +151,14 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
       </div>
 
       <FadeInContainer>
-        <HorizontalDivider className="mb-20 mt-28" />
-
         <div className="flex flex-col items-center justify-center">
-          <Heading tag="h3" className="mb-1 text-center">
+          <Heading tag="h3" wrapperClassName="mt-36" underline>
             Additional
           </Heading>
-          <Underline className="w-40" variant="skinny" />
         </div>
 
         <div className="mx-auto max-w-screen-md">
-          <p className="mx-auto mt-8 max-w-3xl text-center">
+          <p className="mt-8 text-lg">
             Here are some more areas I have dabbled in. I am probably rusty, or
             just not very experienced, so I did not want to list these as true
             skills:

@@ -1,3 +1,4 @@
+import { Underline, UnderlineVariant } from '@/components/core/Underline';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import React, { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 
@@ -11,6 +12,9 @@ export interface HeadingProps
   > {
   tag: HeadingLevel;
   tagStyle?: HeadingLevel;
+  underline?: boolean;
+  underlineClassName?: string;
+  wrapperClassName?: string;
 }
 
 const sanitizeHeadingLevel = (
@@ -32,6 +36,9 @@ export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
     className,
     tag: tagProp,
     tagStyle: tagStyleProp,
+    underline,
+    underlineClassName,
+    wrapperClassName,
     ...headingProps
   } = props;
   const tag = sanitizeHeadingLevel(tagProp);
@@ -39,12 +46,29 @@ export const Heading: FunctionComponent<PropsWithChildren<HeadingProps>> = (
 
   const combinedClassNames = useMemo(() => {
     const headingClassNames = getHeadingClasses({ level: tagStyle });
-    return classNames(headingClassNames, className);
-  }, [className, tagStyle]);
+    return classNames(headingClassNames, { 'mb-1': underline }, className);
+  }, [className, tagStyle, underline]);
 
-  return React.createElement(
+  const headingElement = React.createElement(
     tag,
     { className: combinedClassNames, ...headingProps },
     children,
+  );
+
+  if (!underline) {
+    return headingElement;
+  }
+
+  const underlineVariant: UnderlineVariant = ['h1', 'h2'].includes(tagStyle)
+    ? 'medium'
+    : 'skinny';
+
+  return (
+    <div className={classNames('flex', wrapperClassName)}>
+      <div>
+        {headingElement}
+        <Underline className={underlineClassName} variant={underlineVariant} />
+      </div>
+    </div>
   );
 };

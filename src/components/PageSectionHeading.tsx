@@ -10,12 +10,13 @@ export interface PageSectionHeadingProps {
   /** defaults to vertical */
   enterAnimation?: 'horizontal' | 'vertical';
   title: string;
+  headingClassName?: string;
 }
 
 export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
   props,
 ) => {
-  const { enterAnimation = 'vertical', title } = props;
+  const { enterAnimation = 'vertical', title, headingClassName } = props;
 
   const { className: animationClassName, registerRef } = useEnterAnimation({
     initialClassName: classNames('opacity-0', {
@@ -34,10 +35,9 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
           animationClassName,
         )}
       >
-        <Heading tag="h2" className="mb-2">
+        <Heading tag="h2" className={headingClassName} underline>
           {title}
         </Heading>
-        <Underline />
       </div>
     </div>
   );

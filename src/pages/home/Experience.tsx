@@ -77,7 +77,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
 
   return (
     <PageSection id={id} fullHeight variant="secondary">
-      <PageSectionHeading title="Experience" />
+      <PageSectionHeading title="Experience" headingClassName="mb-3" />
 
       <div className="mx-auto max-w-screen-lg py-20">
         {CARDS.map((card, index) => (
