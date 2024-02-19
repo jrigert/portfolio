@@ -3,6 +3,7 @@
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Heading } from '@/components/core/Heading';
 import { HorizontalDivider } from '@/components/core/HorizontalDivider';
+import { Underline } from '@/components/core/Underline';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { SkillCard, SkillCardProps } from '@/components/SkillCard';
@@ -150,11 +151,14 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
       </div>
 
       <FadeInContainer>
-        <HorizontalDivider className="mb-20 mt-32" />
+        <HorizontalDivider className="mb-20 mt-28" />
 
-        <Heading tag="h3" className="mt-24 text-center">
-          Additional
-        </Heading>
+        <div className="flex flex-col items-center justify-center">
+          <Heading tag="h3" className="mb-1 text-center">
+            Additional
+          </Heading>
+          <Underline className="w-40" variant="skinny" />
+        </div>
 
         <div className="mx-auto max-w-screen-md">
           <p className="mx-auto mt-8 max-w-3xl text-center">
