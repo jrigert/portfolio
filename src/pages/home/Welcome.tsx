@@ -1,6 +1,5 @@
 'use client';
 
-import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { ContactIcons } from '@/components/ContactIcons';
 import { Heading } from '@/components/core/Heading';
 import { Underline } from '@/components/core/Underline';
@@ -21,15 +20,19 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
   const h1AnimationClass = animate
     ? 'opacity-100 translate-x-0'
-    : 'opacity-0 -translate-x-16';
+    : 'opacity-0 -translate-y-4';
 
   const h2AnimationClass = animate
     ? 'opacity-100 translate-x-0'
-    : 'opacity-0 translate-x-16';
+    : 'opacity-0 translate-y-4';
 
-  const dividerAnimationClass = animate
-    ? 'opacity-100 scale-y-100'
-    : 'opacity-0 scale-y-0';
+  const underlineAnimationClass = animate
+    ? 'opacity-100 scale-100'
+    : 'opacity-0 scale-0';
+
+  const iconsAnimationClass = animate
+    ? 'opacity-100 translate-y-0'
+    : 'opacity-0 translate-y-4';
 
   return (
     <PageSection
@@ -60,10 +63,18 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         Web Developer {Divider} Architect {Divider} Director
       </p>
 
-      <FadeInContainer className="duration-[2s]">
-        <Underline className="mt-2 w-96" />
-        <ContactIcons className="mt-12" />
-      </FadeInContainer>
+      <Underline
+        className={classNames(
+          'mt-2 w-96 transition duration-[2s]',
+          underlineAnimationClass,
+        )}
+      />
+      <ContactIcons
+        className={classNames(
+          'mt-12 transition duration-[2s]',
+          iconsAnimationClass,
+        )}
+      />
     </PageSection>
   );
 };
