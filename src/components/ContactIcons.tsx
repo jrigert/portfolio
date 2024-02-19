@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const iconClassName =
-  'duration-250 cursor-pointer transition hover:scale-125 text-primary/90 hover:text-primary';
+  'duration-250 cursor-pointer transition hover:scale-125 text-foreground/90 hover:text-foreground';
 
 export interface ContactIconsProps extends WithClassName {}
 

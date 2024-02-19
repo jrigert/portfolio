@@ -1,6 +1,7 @@
 'use client';
 
 import { Heading } from '@/components/core/Heading';
+import { Underline } from '@/components/core/Underline';
 import { useEnterAnimation } from '@/hooks/animation/useEnterAnimation';
 import { classNames } from '@/utils/style';
 import { FunctionComponent } from 'react';
@@ -36,7 +37,7 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
         <Heading tag="h2" className="mb-2">
           {title}
         </Heading>
-        <div className="h-1.5 w-[70%] rounded-b-xl bg-primary"></div>
+        <Underline />
       </div>
     </div>
   );

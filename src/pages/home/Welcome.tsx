@@ -3,7 +3,7 @@
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { ContactIcons } from '@/components/ContactIcons';
 import { Heading } from '@/components/core/Heading';
-import { HorizontalDivider } from '@/components/core/HorizontalDivider';
+import { Underline } from '@/components/core/Underline';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
 import { useAnimate } from '@/hooks/animation/useAnimate';
@@ -60,16 +60,9 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         Web Developer {Divider} Architect {Divider} Director
       </p>
 
-      <HorizontalDivider
-        color="foreground"
-        className={classNames(
-          'mb-6 mt-8 transition duration-1000',
-          dividerAnimationClass,
-        )}
-      />
-
       <FadeInContainer className="duration-[2s]">
-        <ContactIcons className="mt-4" />
+        <Underline className="mt-2 w-96" />
+        <ContactIcons className="mt-12" />
       </FadeInContainer>
     </PageSection>
   );
