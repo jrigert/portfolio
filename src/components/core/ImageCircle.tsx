@@ -1,6 +1,7 @@
 'use client';
 
 import { useHasLoaded } from '@/hooks/useHasLoaded';
+import { useOnEnterViewport } from '@/hooks/useOnEnterViewport';
 import { classNames } from '@/utils/style';
 import Image, { ImageProps } from 'next/image';
 import { FunctionComponent } from 'react';
@@ -11,8 +12,13 @@ export interface ImageCircleProps
 export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
   const { alt, ...imageProps } = props;
   const { hasLoaded, onLoad } = useHasLoaded();
-  const containerAnimationClass = hasLoaded ? 'opacity-100' : 'opacity-0';
-  const imageAnimationClass = hasLoaded
+  const { hasEntered, registerRef } = useOnEnterViewport({
+    intersectOptions: { threshold: 0.2 },
+  });
+
+  const animateIn = hasEntered && hasLoaded;
+  const containerAnimationClass = animateIn ? 'opacity-100' : 'opacity-0';
+  const imageAnimationClass = animateIn
     ? 'opacity-100 scale-100'
     : 'opacity-0 scale-90';
 
@@ -22,6 +28,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
         'relative h-56 w-56 overflow-hidden rounded-full outline outline-4 outline-offset-8 outline-foreground/70 transition duration-[2s] ease-out',
         containerAnimationClass,
       )}
+      ref={registerRef}
     >
       <div className="absolute h-full w-full rounded-xl bg-primary opacity-60" />
 

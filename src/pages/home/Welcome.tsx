@@ -1,8 +1,9 @@
 'use client';
 
+import { FadeInContainer } from '@/components/animation/FadeInContainer';
+import { ContactIcons } from '@/components/ContactIcons';
 import { Heading } from '@/components/core/Heading';
 import { HorizontalDivider } from '@/components/core/HorizontalDivider';
-import { ImageCircle } from '@/components/core/ImageCircle';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
 import { useAnimate } from '@/hooks/animation/useAnimate';
@@ -32,22 +33,32 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
   return (
     <PageSection
-      className="mt-12 flex flex-shrink-0 flex-col items-center justify-center"
+      className="mt-6 flex flex-shrink-0 flex-col items-center justify-center"
       id={id}
       fullHeight
     >
-      <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
-
       <Heading
         tag="h1"
         className={classNames(
           headingSharedClasses,
-          'relative mb-0 mt-10',
+          'relative mb-0',
           h1AnimationClass,
         )}
       >
         Jon Rigert
       </Heading>
+
+      <p
+        aria-label="Web Developer, Architect and Director"
+        className={classNames(
+          subHeadingClasses,
+          'mt-8 flex items-center text-center',
+          headingSharedClasses,
+          h2AnimationClass,
+        )}
+      >
+        Web Developer {Divider} Architect {Divider} Director
+      </p>
 
       <HorizontalDivider
         color="foreground"
@@ -57,17 +68,9 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         )}
       />
 
-      <p
-        aria-label="Web Developer, Architect and Director"
-        className={classNames(
-          subHeadingClasses,
-          'flex items-center text-center',
-          headingSharedClasses,
-          h2AnimationClass,
-        )}
-      >
-        Web Developer {Divider} Architect {Divider} Director
-      </p>
+      <FadeInContainer className="duration-[2s]">
+        <ContactIcons className="mt-4" />
+      </FadeInContainer>
     </PageSection>
   );
 };

@@ -3,6 +3,7 @@
 import { Badge } from '@/components/core/Badge';
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Heading } from '@/components/core/Heading';
+import { ImageCircle } from '@/components/core/ImageCircle';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { HomePageSectionProps } from '@/pages/home/index';
@@ -36,6 +37,10 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
           design and implementation.
         </p>
       </FadeInContainer>
+
+      <div className="mt-16 flex justify-center">
+        <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
+      </div>
 
       <FadeInContainer>
         <Heading tag="h3" className="mb-6 mt-24 text-center">
