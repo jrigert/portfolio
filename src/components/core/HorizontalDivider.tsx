@@ -21,12 +21,12 @@ export type HorizontalDividerVariantProps = VariantProps<
 const horizontalDividerVariants = cva('border-x-0 mx-auto', {
   variants: {
     variant: {
-      single: ['h-px', 'border-t-2'],
+      single: ['h-px', 'border-t'],
       double: ['h-1.5', 'border-y'],
     },
     size: {
       small: 'w-48',
-      standard: 'w-80',
+      medium: 'w-80',
       full: 'w-full',
     },
     color: {
@@ -35,8 +35,8 @@ const horizontalDividerVariants = cva('border-x-0 mx-auto', {
     },
   },
   defaultVariants: {
-    variant: 'double',
-    size: 'standard',
+    variant: 'single',
+    size: 'full',
     color: 'primary',
   },
 });

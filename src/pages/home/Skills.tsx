@@ -2,8 +2,6 @@
 
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Heading } from '@/components/core/Heading';
-import { HorizontalDivider } from '@/components/core/HorizontalDivider';
-import { Underline } from '@/components/core/Underline';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { SkillCard, SkillCardProps } from '@/components/SkillCard';
