@@ -33,6 +33,7 @@ const buttonVariants = cva(
       variant: {
         solid: [],
         outline: ['border-2 rounded-xl'],
+        naked: [],
       },
       color: {
         default: ['bg-foreground', 'text-background', 'hover:bg-foreground/80'],
@@ -78,6 +79,41 @@ const buttonVariants = cva(
         color: 'loud',
         className:
           'border-loud/90 text-loud hover:bg-loud/20 hover:border-loud bg-transparent',
+      },
+      {
+        variant: 'naked',
+        color: 'default',
+        className:
+          'text-foreground hover:bg-foreground/10 hover:border-foreground bg-transparent',
+      },
+      {
+        variant: 'naked',
+        color: 'default-on-dark',
+        className:
+          'text-white hover:bg-white/10 hover:border-white bg-transparent',
+      },
+      {
+        variant: 'naked',
+        color: 'primary',
+        className:
+          'text-primary hover:bg-primary/10 hover:border-primary bg-transparent',
+      },
+      {
+        variant: 'naked',
+        color: 'secondary',
+        className:
+          'text-secondary hover:bg-secondary/10 hover:border-secondary bg-transparent',
+      },
+      {
+        variant: 'naked',
+        color: 'loud',
+        className:
+          'text-loud hover:bg-loud/10 hover:border-loud bg-transparent',
+      },
+      {
+        variant: 'naked',
+        size: 'icon',
+        className: ['h-12', 'w-12', 'text-3xl', 'rounded-full'],
       },
     ],
     defaultVariants: {

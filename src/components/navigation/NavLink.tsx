@@ -13,11 +13,19 @@ export interface NavLinkProps {
   dividerClassName?: string;
   linkClassName?: string;
   showDivider?: boolean;
+  onClick?: () => void;
 }
 
 export const NavLink: FunctionComponent<NavLinkProps> = (props) => {
-  const { href, id, label, dividerClassName, linkClassName, showDivider } =
-    props;
+  const {
+    href,
+    id,
+    label,
+    dividerClassName,
+    linkClassName,
+    onClick,
+    showDivider,
+  } = props;
 
   const { activeSection } = useScrollContext();
   const isActive = activeSection === id;
@@ -36,7 +44,7 @@ export const NavLink: FunctionComponent<NavLinkProps> = (props) => {
 
   return (
     <li className="flex items-center">
-      <Link href={href} className={linkClassNames}>
+      <Link href={href} className={linkClassNames} onClick={onClick}>
         {label}
       </Link>
       {showDivider ? <VerticalDivider className={dividerClassName} /> : null}

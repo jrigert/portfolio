@@ -34,7 +34,7 @@ export const ThemeToggle: FunctionComponent<WithClassName> = (props) => {
 
   return (
     <Button
-      variant="outline"
+      variant="naked"
       size="icon"
       color="default-on-dark"
       onClick={toggleTheme}

@@ -19,8 +19,8 @@ export interface HomepageConfig {
 export const HOMEPAGE_CONFIG: HomepageConfig = {
   sections: [
     {
-      linkLabel: 'Welcome',
-      id: 'welcome',
+      linkLabel: 'Home',
+      id: 'home',
       Component: HomeWelcome,
     },
     {
