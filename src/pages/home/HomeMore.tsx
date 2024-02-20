@@ -5,16 +5,33 @@ import { Badge } from '@/components/core/Badge';
 import { Heading } from '@/components/core/Heading';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
-import { ResumePanel } from '@/components/ResumePanel';
 import { HomePageSectionProps } from '@/pages/home/index';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
   faBaby,
   faBook,
   faDog,
   faDumbbell,
   faGamepad,
+  faHiking,
+  faCampground,
 } from '@fortawesome/free-solid-svg-icons';
 import { FunctionComponent } from 'react';
+
+interface PersonalInfoItem {
+  label: string;
+  icon: IconDefinition;
+}
+
+const PERSONAL_INFO: PersonalInfoItem[] = [
+  { icon: faBaby, label: 'Father' },
+  { icon: faDog, label: 'Dog Dad' },
+  { icon: faGamepad, label: 'Gamer' },
+  { icon: faBook, label: 'Reader' },
+  { icon: faDumbbell, label: 'Fitness' },
+  { icon: faHiking, label: 'Hiking' },
+  { icon: faCampground, label: 'Camping' },
+];
 
 export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
@@ -32,12 +49,12 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           Personal Info
         </Heading>
 
-        <ul className="flex flex-wrap justify-center gap-6">
-          <Badge icon={faBaby} label="Father" />
-          <Badge icon={faDog} label="Dog Dad" />
-          <Badge icon={faGamepad} label="Gamer" />
-          <Badge icon={faBook} label="Reader" />
-          <Badge icon={faDumbbell} label="Fitness" />
+        <ul className="mx-auto flex max-w-xl flex-wrap justify-center gap-6">
+          {PERSONAL_INFO.map(({ label, icon }) => (
+            <li key={label}>
+              <Badge icon={icon} label={label} />
+            </li>
+          ))}
         </ul>
       </FadeInContainer>
 

@@ -9,66 +9,48 @@ import { useInterval } from '@/hooks/useInterval';
 import { useOnEnterViewport } from '@/hooks/useOnEnterViewport';
 import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames } from '@/utils/style';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
-import {
-  faDatabase,
-  faKey,
-  faNetworkWired,
-  faPaintbrush,
-  faToolbox,
-} from '@fortawesome/free-solid-svg-icons';
 import { FunctionComponent, useMemo, useState } from 'react';
 
 const SKILLS: SkillCardProps[] = [
   {
     title: 'Fundamentals',
     description: 'JavaScript, CSS, HTML, Accessibility',
-    icon: faKey,
   },
   {
     title: 'React',
     description: 'NextJS, Functional Programming, React Native',
-    icon: faReact,
   },
   {
     title: 'State Management',
     description: 'Redux, Context API',
-    icon: faDatabase,
   },
   {
     title: 'API Integration',
     description: 'Apollo Client, react-query',
-    icon: faDatabase,
   },
   {
     title: 'Tools',
     description: 'TypeScript, TurboRepo, Unit Testing',
-    icon: faToolbox,
   },
   {
     title: 'Styling',
     description: 'CSS, SASS, Tailwind, Storybook',
-    icon: faPaintbrush,
   },
   {
     title: 'API Development',
     description: 'NodeJS, Apollo Server',
-    icon: faNetworkWired,
   },
   {
     title: 'Databases',
     description: 'SQL, Mongo',
-    icon: faDatabase,
   },
   {
     title: 'CMS',
     description: 'Drupal, Contentful, Builder.io',
-    icon: faDatabase,
   },
   {
     title: 'CI/CD',
     description: 'GitHub Actions, Bitbucket Pipelines, Azure Dev Ops, Jenkins',
-    icon: faDatabase,
   },
 ];
 
@@ -139,7 +121,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
       <PageSectionHeading title="Skills" />
 
       <div ref={registerRef}>
-        <ul className="mx-auto mt-16 grid max-w-xs grid-cols-1 gap-10 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
+        <ul className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
           {skills.map(({ containerClassName, ...props }) => (
             <li key={props.title} className={containerClassName}>
               <SkillCard {...props} className="h-full" />
@@ -156,7 +138,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
         </div>
 
         <div className="mx-auto max-w-screen-md">
-          <p className="mt-8 text-lg">
+          <p className="mt-8 sm:text-lg">
             Here are some more areas I have dabbled in. I am probably rusty, or
             just not very experienced, so I did not want to list these as true
             skills:
