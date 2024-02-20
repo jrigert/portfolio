@@ -41,7 +41,7 @@ export const Header: FunctionComponent = () => {
         <nav
           role="navigation"
           className={classNames(
-            'duration-250 fixed right-0 top-14 min-w-60 bg-dark-blue p-10 text-xl shadow-lg shadow-black transition lg:right-auto lg:top-auto lg:block lg:min-w-0 lg:p-0 lg:text-base lg:shadow-none',
+            'duration-250 fixed right-0 top-14 min-w-60 bg-dark-blue p-10 text-xl shadow-lg shadow-black transition lg:relative lg:right-auto lg:top-auto lg:block lg:min-w-0 lg:translate-x-0 lg:p-0 lg:text-base lg:shadow-none',
             animationState === 'closed' && 'hidden translate-x-60',
             animationState === 'opening' && 'translate-x-60',
             animationState === 'open' && 'translate-x-0',
@@ -71,7 +71,7 @@ export const Header: FunctionComponent = () => {
           </ul>
         </nav>
 
-        <div className="flex align-middle">
+        <div className="flex items-center">
           <ThemeToggle />
 
           <Button
