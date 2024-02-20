@@ -23,7 +23,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
           size="icon"
           color="primary"
           className={classNames(
-            'duration-250 fixed bottom-5 right-5 h-12 w-12 rounded-full transition ease-out hover:scale-110',
+            'fixed bottom-5 right-5 h-12 w-12 rounded-full transition duration-500 ease-out hover:scale-110',
             animationClass,
           )}
         >
