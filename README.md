@@ -2,15 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODO
 
-- observer memory cleanup
-- Clean up image animation
-- Active nav item highlighting
+- New image
 - Something fun on image hover?
 - prefers reduced motion
-- github, linkedin, email, etc
-- pdf resume?
 - double check lint and types
-- mobile navigation
 - resume downloads
 
 ## Getting Started
