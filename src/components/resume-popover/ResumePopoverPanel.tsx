@@ -1,6 +1,7 @@
 'use client';
 
 import { ContactIcons } from '@/components/ContactIcons';
+import { Button } from '@/components/core/Button';
 import { ResumePanel } from '@/components/ResumePanel';
 import { useAnimate } from '@/hooks/animation/useAnimate';
 import { classNames } from '@/utils/style';
@@ -18,14 +19,16 @@ export const ResumePopoverPanel: FunctionComponent = () => {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button
+        <Button
+          size="icon"
+          color="primary"
           className={classNames(
-            'fixed bottom-5 right-5 h-12 w-12 rounded-full bg-primary text-white transition duration-1000 ease-out hover:scale-110',
+            'duration-250 fixed bottom-5 right-5 h-12 w-12 rounded-full transition ease-out hover:scale-110',
             animationClass,
           )}
         >
           <FontAwesomeIcon icon={faIdCard} className="text-2xl" />
-        </button>
+        </Button>
       </Popover.Trigger>
       <Popover.Anchor asChild>
         <div className="fixed bottom-16 right-5 h-px w-12"></div>
