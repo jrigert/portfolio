@@ -166,7 +166,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
             {ADDITIONAL_SKILLS.map((skill) => (
               <li
                 key={skill}
-                className="-mx-px my-3 border-collapse border-x-2 border-x-primary px-8 text-lg hover:bg-primary/10"
+                className="-mx-px my-3 border-collapse border-x-2 border-x-primary px-3 text-lg hover:bg-primary/10 sm:px-8"
               >
                 {skill}
               </li>

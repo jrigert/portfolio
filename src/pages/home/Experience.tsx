@@ -80,7 +80,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
     <PageSection id={id} fullHeight variant="secondary" className="pb-20">
       <PageSectionHeading title="Experience" headingClassName="mb-3" />
 
-      <div className="mx-auto max-w-screen-lg py-20">
+      <div className="mx-auto max-w-screen-lg py-12 sm:py-20">
         {CARDS.map((card, index) => (
           <ExperienceCard
             key={card.company}
@@ -90,7 +90,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
         ))}
       </div>
 
-      <HorizontalDivider className="mb-20" />
+      <HorizontalDivider className="mb-20 max-w-screen-lg" />
 
       <div className="flex justify-center text-xl">
         <ResumePanel className="w-auto" iconClassName="text-5xl mt-4" />

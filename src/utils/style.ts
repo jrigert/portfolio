@@ -10,12 +10,12 @@ export type HeadingVariantProps = VariantProps<typeof headingVariants>;
 const headingVariants = cva(['font-bold font-heading'], {
   variants: {
     level: {
-      h1: ['text-7xl', 'mb-6', 'text-primary'],
-      h2: ['text-5xl', 'mb-4'],
-      h3: ['text-3xl', 'mb-3'],
-      h4: ['text-2xl', 'mb-2'],
-      h5: ['text-xl', 'mb-2'],
-      h6: ['text-lg', 'mb-2'],
+      h1: ['text-5xl', 'mb-6', 'text-primary', 'sm:text-7xl'],
+      h2: ['text-4xl', 'mb-4', 'sm:text-5xl'],
+      h3: ['text-2xl', 'mb-3', 'sm:text-3xl'],
+      h4: ['text-xl', 'mb-2', 'sm:text-2xl'],
+      h5: ['text-lg', 'mb-2', 'sm:text-xl'],
+      h6: ['sm:text-lg', 'mb-2'],
     },
   },
   defaultVariants: {

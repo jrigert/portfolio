@@ -34,17 +34,17 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
   } = props;
 
   return (
-    <FadeInContainer className="px-6 text-lg">
+    <FadeInContainer className="sm:text-lg">
       <Heading tag="h3" className="mb-2">
         {company}
       </Heading>
-      <div className="mb-2 font-heading text-xl font-bold text-primary">
+      <div className="mb-2 font-heading text-lg font-bold text-primary sm:text-xl">
         {title}
       </div>
       <div className="font-heading">
         {startDate} - {endDate}
       </div>
-      <p className="mt-12 text-xl">{description.join('. ')}</p>
+      <p className="mt-12 sm:text-lg">{description.join('. ')}</p>
 
       {previousPositions ? (
         <div className="mt-12 text-sm">
@@ -61,7 +61,7 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
         </div>
       ) : null}
 
-      {showDivider ? <HorizontalDivider className="my-20" /> : null}
+      {showDivider ? <HorizontalDivider className="my-10 sm:my-20" /> : null}
     </FadeInContainer>
   );
 };

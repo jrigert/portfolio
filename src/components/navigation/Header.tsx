@@ -35,6 +35,7 @@ export const Header: FunctionComponent = () => {
             alt="JR: Click to return home"
             width={50}
             height={33}
+            priority
           />
         </Link>
 

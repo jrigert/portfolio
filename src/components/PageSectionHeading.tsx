@@ -27,7 +27,7 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
   });
 
   return (
-    <div className="flex w-full flex-col items-center justify-center pt-16">
+    <div className="flex w-full flex-col items-center justify-center pt-12 sm:pt-16">
       <div
         ref={registerRef}
         className={classNames(

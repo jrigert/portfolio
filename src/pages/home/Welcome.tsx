@@ -16,7 +16,9 @@ const subHeadingClasses = getHeadingClasses({ level: 'h3' });
 export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
   const animate = useAnimate();
-  const Divider = <VerticalDivider className="mt-1 h-6 border-r-primary" />;
+  const Divider = (
+    <VerticalDivider className="mx-2 h-4 border-r-primary sm:mx-4 sm:h-6" />
+  );
 
   const h1AnimationClass = animate
     ? 'opacity-100 translate-x-0'
@@ -55,7 +57,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         aria-label="Web Developer, Architect and Director"
         className={classNames(
           subHeadingClasses,
-          'mt-8 flex items-center text-center',
+          'mt-8 flex items-center text-center text-base sm:text-xl lg:text-3xl',
           headingSharedClasses,
           h2AnimationClass,
         )}
@@ -65,7 +67,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <Underline
         className={classNames(
-          'mt-2 w-96 transition duration-2000',
+          'mt-2 max-w-60 transition duration-2000 sm:max-w-96',
           underlineAnimationClass,
         )}
       />

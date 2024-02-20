@@ -7,7 +7,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import {
   ButtonHTMLAttributes,
   DetailedHTMLProps,
-  FunctionComponent,
+  forwardRef,
   PropsWithChildren,
   useMemo,
 } from 'react';
@@ -124,9 +124,10 @@ const buttonVariants = cva(
   },
 );
 
-export const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = (
-  props,
-) => {
+export const Button = forwardRef<
+  HTMLButtonElement,
+  PropsWithChildren<ButtonProps>
+>(function ButtonComponent(props, ref) {
   const { children, className, icon, size, variant, color, ...buttonProps } =
     props;
 
@@ -136,7 +137,7 @@ export const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = (
   }, [className, size, variant, color]);
 
   return (
-    <button className={combinedClassNames} {...buttonProps}>
+    <button className={combinedClassNames} ref={ref} {...buttonProps}>
       {children}
       {icon ? (
         <FontAwesomeIcon
@@ -146,4 +147,4 @@ export const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = (
       ) : null}
     </button>
   );
-};
+});

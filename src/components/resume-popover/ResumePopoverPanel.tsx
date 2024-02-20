@@ -27,7 +27,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
             animationClass,
           )}
         >
-          <FontAwesomeIcon icon={faIdCard} className="text-2xl" />
+          <FontAwesomeIcon icon={faIdCard} className="mt-1 text-2xl" />
         </Button>
       </Popover.Trigger>
       <Popover.Anchor asChild>
