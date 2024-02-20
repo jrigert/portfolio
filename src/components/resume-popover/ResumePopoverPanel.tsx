@@ -14,7 +14,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
   const animate = useAnimate({ delay: 1200 });
   const animationClass = animate
     ? 'opacity-100 translate-x-0'
-    : 'opacity-0 translate-x-20';
+    : 'motion-safe:opacity-0 motion-safe:translate-x-20';
 
   return (
     <Popover.Root>
@@ -23,7 +23,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
           size="icon"
           color="primary"
           className={classNames(
-            'fixed bottom-5 right-5 h-12 w-12 rounded-full transition duration-500 ease-out hover:scale-110',
+            'fixed bottom-5 right-5 h-12 w-12 rounded-full transition duration-500 ease-out motion-safe:hover:scale-110 motion-reduce:transition-none',
             animationClass,
           )}
         >
@@ -42,7 +42,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
           <Popover.Close className="absolute right-2 top-1" aria-label="Close">
             <FontAwesomeIcon
               icon={faX}
-              className="text-2xl transition-transform hover:scale-125"
+              className="text-2xl transition-transform motion-safe:hover:scale-125 motion-reduce:transition-none"
             />
           </Popover.Close>
 

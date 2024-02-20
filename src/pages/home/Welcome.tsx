@@ -10,7 +10,8 @@ import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';
 
-const headingSharedClasses = 'transition duration-1500 ease-out';
+const headingSharedClasses =
+  'transition motion-reduce:transition-none duration-1500 ease-out';
 const subHeadingClasses = getHeadingClasses({ level: 'h3' });
 
 export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
@@ -22,19 +23,19 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
   const h1AnimationClass = animate
     ? 'opacity-100 translate-x-0'
-    : 'opacity-0 -translate-y-4';
+    : 'motion-safe:opacity-0 motion-safe:-translate-y-4';
 
   const h2AnimationClass = animate
     ? 'opacity-100 translate-x-0'
-    : 'opacity-0 translate-y-4';
+    : 'motion-safe:opacity-0 motion-safe:translate-y-4';
 
   const underlineAnimationClass = animate
     ? 'opacity-100 scale-100'
-    : 'opacity-0 scale-0';
+    : 'motion-safe:opacity-0 motion-safe:scale-0';
 
   const iconsAnimationClass = animate
     ? 'opacity-100 translate-y-0'
-    : 'opacity-0 translate-y-4';
+    : 'motion-safe:opacity-0 motion-safe:translate-y-4';
 
   return (
     <PageSection
@@ -67,14 +68,14 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <Underline
         className={classNames(
-          'mt-2 max-w-60 transition duration-2000 sm:max-w-96',
+          'mt-2 max-w-60 transition duration-2000 motion-reduce:transition-none sm:max-w-96',
           underlineAnimationClass,
         )}
       />
 
       <div
         className={classNames(
-          'mt-12 transition duration-1500 ease-out',
+          'mt-12 transition duration-1500 ease-out motion-reduce:transition-none',
           iconsAnimationClass,
         )}
       >

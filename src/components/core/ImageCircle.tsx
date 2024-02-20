@@ -25,7 +25,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
   return (
     <div
       className={classNames(
-        'duration-2000 relative h-56 w-56 overflow-hidden rounded-full outline outline-4 outline-offset-8 outline-foreground/70 transition ease-out',
+        'relative h-56 w-56 overflow-hidden rounded-full outline outline-4 outline-offset-8 outline-foreground/70 transition duration-2000 ease-out motion-reduce:transition-opacity',
         containerAnimationClass,
       )}
       ref={registerRef}
@@ -34,7 +34,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
 
       <Image
         className={classNames(
-          'mt-3 transition duration-500',
+          'mt-3 transition duration-500 motion-reduce:transition-opacity',
           imageAnimationClass,
         )}
         onLoad={onLoad}

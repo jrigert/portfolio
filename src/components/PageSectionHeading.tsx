@@ -31,7 +31,7 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
       <div
         ref={registerRef}
         className={classNames(
-          'flex flex-col items-center justify-center transition duration-1000 ease-out',
+          'flex flex-col items-center justify-center transition duration-1000 ease-out motion-reduce:transition-opacity',
           animationClassName,
         )}
       >

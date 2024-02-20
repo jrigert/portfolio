@@ -108,10 +108,13 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
 
       return {
         ...skill,
-        containerClassName: classNames('transition duration-1000', {
-          ['opacity-100 translate-y-0']: isVisible,
-          ['opacity-0 translate-y-5']: !isVisible,
-        }),
+        containerClassName: classNames(
+          'transition motion-reduce:transition-opacity duration-1000',
+          {
+            ['opacity-100 translate-y-0']: isVisible,
+            ['opacity-0 motion-safe:translate-y-5']: !isVisible,
+          },
+        ),
       } satisfies SkillComponentData;
     });
   }, [lastAnimatedIndex]);
