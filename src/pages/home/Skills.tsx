@@ -42,12 +42,12 @@ const SKILLS: SkillCardProps[] = [
   },
   {
     title: 'Tools',
-    description: 'TypeScript, TurboRepo',
+    description: 'TypeScript, TurboRepo, Unit Testing',
     icon: faToolbox,
   },
   {
     title: 'Styling',
-    description: 'CSS, SASS, Tailwind',
+    description: 'CSS, SASS, Tailwind, Storybook',
     icon: faPaintbrush,
   },
   {

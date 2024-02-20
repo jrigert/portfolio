@@ -16,7 +16,7 @@ const ResumeButtons: FunctionComponent<{
     <>
       <InteractiveIcon
         icon={faFilePdf}
-        className={classNames('mr-4', iconClassName)}
+        className={classNames('mr-8', iconClassName)}
       />
       <InteractiveIcon icon={faFileWord} className={iconClassName} />
     </>
@@ -31,13 +31,8 @@ export const ResumePanel: FunctionComponent<ResumePanelProps> = (props) => {
   }
 
   return (
-    <div
-      className={classNames(
-        'flex flex-col items-center rounded-lg border-x-2 border-primary px-8 pb-3 pt-2',
-        className,
-      )}
-    >
-      <p className="mb-2 font-heading font-semibold">View Resume</p>
+    <div className={classNames('flex flex-col items-center', className)}>
+      <p className="mb-2 font-heading font-semibold">Resume</p>
 
       <div>
         <ResumeButtons iconClassName={iconClassName} />

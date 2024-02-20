@@ -1,3 +1,4 @@
+import { ResumePopoverPanel } from '@/components/resume-popover/ResumePopoverPanel';
 import { HOMEPAGE_CONFIG } from '@/config/homepage';
 import type { FunctionComponent } from 'react';
 
@@ -11,6 +12,8 @@ export const HomePage: FunctionComponent = () => {
           <Component id={id} />
         </section>
       ))}
+
+      <ResumePopoverPanel />
     </main>
   );
 };

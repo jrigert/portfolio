@@ -1,6 +1,6 @@
 'use client';
 
-import { FadeInContainer } from '@/components/animation/FadeInContainer';
+import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import {
   ExperienceCard,
   ExperienceCardData,
@@ -90,8 +90,10 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
         ))}
       </div>
 
-      <div className="flex justify-center">
-        <ResumePanel className="w-auto" />
+      <HorizontalDivider className="mb-20" />
+
+      <div className="flex justify-center text-xl">
+        <ResumePanel className="w-auto" iconClassName="text-5xl mt-4" />
       </div>
     </PageSection>
   );

@@ -5,7 +5,6 @@ import { Heading } from '@/components/core/Heading';
 import { Underline } from '@/components/core/Underline';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
-import { ResumePanel } from '@/components/ResumePanel';
 import { useAnimate } from '@/hooks/animation/useAnimate';
 import { HomePageSectionProps } from '@/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
@@ -66,19 +65,18 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <Underline
         className={classNames(
-          'duration-2000 mt-2 w-96 transition',
+          'mt-2 w-96 transition duration-2000',
           underlineAnimationClass,
         )}
       />
 
       <div
         className={classNames(
-          'duration-1500 mt-12 transition ease-out',
+          'mt-12 transition duration-1500 ease-out',
           iconsAnimationClass,
         )}
       >
         <ContactIcons />
-        <ResumePanel className="mt-12" />
       </div>
     </PageSection>
   );

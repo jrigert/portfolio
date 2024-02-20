@@ -5,10 +5,13 @@ import type { FunctionComponent } from 'react';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export interface ContactIconsProps extends WithClassName {}
+export interface ContactIconsProps extends WithClassName {
+  iconClassName?: string;
+  showGitHub?: boolean;
+}
 
 export const ContactIcons: FunctionComponent<ContactIconsProps> = (props) => {
-  const { className } = props;
+  const { className, iconClassName, showGitHub = true } = props;
 
   return (
     <div
@@ -21,7 +24,7 @@ export const ContactIcons: FunctionComponent<ContactIconsProps> = (props) => {
         href="mailto:jonrigert@gmail.com?subject=Hi Jon!"
         aria-label="Send me an email. Opens your default email client"
       >
-        <InteractiveIcon icon={faEnvelope} />
+        <InteractiveIcon icon={faEnvelope} className={iconClassName} />
       </a>
 
       <a
@@ -30,17 +33,19 @@ export const ContactIcons: FunctionComponent<ContactIconsProps> = (props) => {
         target="_blank"
         rel="noopener"
       >
-        <InteractiveIcon icon={faLinkedin} />
+        <InteractiveIcon icon={faLinkedin} className={iconClassName} />
       </a>
 
-      <a
-        href="https://github.com/jrigert"
-        aria-label="View my GitHub. Opens in a new tab"
-        target="_blank"
-        rel="noopener"
-      >
-        <InteractiveIcon icon={faGithub} />
-      </a>
+      {showGitHub ? (
+        <a
+          href="https://github.com/jrigert"
+          aria-label="View my GitHub. Opens in a new tab"
+          target="_blank"
+          rel="noopener"
+        >
+          <InteractiveIcon icon={faGithub} className={iconClassName} />
+        </a>
+      ) : null}
     </div>
   );
 };

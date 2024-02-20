@@ -56,20 +56,6 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           <p>2005 - 2009</p>
         </div>
       </FadeInContainer>
-
-      <FadeInContainer className="">
-        <Heading
-          tag="h3"
-          wrapperClassName="mb-6 mt-40 justify-center"
-          underline
-        >
-          Resume
-        </Heading>
-
-        <div className="mt-12 flex justify-center gap-8">
-          <ResumePanel buttonsOnly iconClassName="text-7xl" />
-        </div>
-      </FadeInContainer>
     </PageSection>
   );
 };
