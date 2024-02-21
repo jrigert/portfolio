@@ -3,8 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODO
 
 - New image
-- Something fun on image hover?
-- prefers reduced motion
 - double check lint and types
 - resume downloads
 
