@@ -124,7 +124,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
       <PageSectionHeading title="Skills" />
 
       <div ref={registerRef}>
-        <ul className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3">
+        <ul className="mx-auto mt-20 grid max-w-xs grid-cols-1 gap-x-12 gap-y-16 text-center sm:max-w-screen-lg sm:grid-cols-2 md:grid-cols-3 lg:gap-x-16">
           {skills.map(({ containerClassName, ...props }) => (
             <li key={props.title} className={containerClassName}>
               <SkillCard {...props} className="h-full" />

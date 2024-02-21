@@ -13,12 +13,16 @@ export const SkillCard: FunctionComponent<SkillCardProps> = (props) => {
   return (
     <div
       className={classNames(
-        'flex flex-col justify-between rounded-md border-2 border-secondary px-4 py-2 font-semibold',
+        'flex flex-col justify-between font-semibold',
         className,
       )}
     >
-      <p className="font-heading text-xl text-primary">{title}</p>
-      <p className="mt-3">{description}</p>
+      <div>
+        <p className="mx-auto inline-block font-heading text-xl text-primary underline">
+          {title}
+        </p>
+        <p className="mt-3">{description}</p>
+      </div>
     </div>
   );
 };

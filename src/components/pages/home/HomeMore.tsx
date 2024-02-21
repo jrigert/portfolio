@@ -15,6 +15,9 @@ import {
   faGamepad,
   faHiking,
   faCampground,
+  faDiceD20,
+  faPuzzlePiece,
+  faChessBoard,
 } from '@fortawesome/free-solid-svg-icons';
 import { FunctionComponent } from 'react';
 
@@ -31,6 +34,9 @@ const PERSONAL_INFO: PersonalInfoItem[] = [
   { icon: faDumbbell, label: 'Fitness' },
   { icon: faHiking, label: 'Hiking' },
   { icon: faCampground, label: 'Camping' },
+  { icon: faDiceD20, label: 'D&D' },
+  { icon: faPuzzlePiece, label: 'Puzzles' },
+  { icon: faChessBoard, label: 'Board Games' },
 ];
 
 export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
@@ -49,7 +55,7 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           Personal Info
         </Heading>
 
-        <ul className="mx-auto flex max-w-xl flex-wrap justify-center gap-6">
+        <ul className="mx-auto flex max-w-2xl flex-wrap justify-center gap-6">
           {PERSONAL_INFO.map(({ label, icon }) => (
             <li key={label}>
               <Badge icon={icon} label={label} />
@@ -65,7 +71,7 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           Education
         </Heading>
 
-        <div className="mx-auto mt-12 max-w-screen-lg">
+        <div className="mx-auto mt-12 max-w-screen-lg text-center">
           <Heading tag="h4">B.S. Game and Simulation Programming</Heading>
           <p className="text-primary">DeVry University</p>
           <p>2005 - 2009</p>

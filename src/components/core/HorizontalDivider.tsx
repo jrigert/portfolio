@@ -32,6 +32,7 @@ const horizontalDividerVariants = cva('border-x-0 mx-auto', {
     color: {
       foreground: 'border-y-foreground/30',
       primary: 'border-y-primary/60',
+      secondary: 'border-y-secondary/90',
     },
   },
   defaultVariants: {
