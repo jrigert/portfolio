@@ -19,13 +19,12 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
           Hi! I&rsquo;m <strong>Jon</strong>. I am a web developer, architect,
           team lead and director. With <strong>over a decade</strong> of
           experience building web applications, I love creating usable web
-          applications with <strong>clean</strong> and
-          <strong> scalable</strong> code.
+          applications with clean and scalable code.
         </p>
 
         <p>
-          I am passionate about <strong>inclusive and accessible</strong> web
-          design and implementation.
+          I am passionate about inclusive and accessible web design and
+          implementation.
         </p>
       </FadeInContainer>
 
