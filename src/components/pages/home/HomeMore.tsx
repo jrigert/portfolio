@@ -56,9 +56,7 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
             </li>
           ))}
         </ul>
-      </FadeInContainer>
 
-      <FadeInContainer>
         <Heading
           tag="h3"
           wrapperClassName="mb-6 mt-40 justify-center"

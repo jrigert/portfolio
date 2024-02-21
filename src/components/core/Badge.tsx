@@ -11,7 +11,7 @@ export const Badge: FunctionComponent<BadgeProps> = (props) => {
   const { label, icon } = props;
 
   return (
-    <span className="inline-block rounded-lg border-2 border-secondary px-3 py-2 text-lg font-semibold duration-500 hover:bg-secondary/20 motion-safe:hover:scale-110">
+    <span className="inline-block rounded-lg border-2 border-secondary px-3 py-2 text-lg font-semibold">
       {icon ? (
         <FontAwesomeIcon aria-hidden icon={icon} className="mr-2" />
       ) : null}

@@ -1,5 +1,6 @@
 'use client';
 
+import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import {
   ExperienceCard,
@@ -80,21 +81,23 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
     <PageSection id={id} fullHeight variant="secondary" className="pb-20">
       <PageSectionHeading title="Experience" />
 
-      <div className="mx-auto max-w-screen-lg py-12 sm:py-20">
-        {CARDS.map((card, index) => (
-          <ExperienceCard
-            key={card.company}
-            {...card}
-            showDivider={index < CARDS.length - 1}
-          />
-        ))}
-      </div>
+      <FadeInContainer>
+        <div className="mx-auto max-w-screen-lg py-12 sm:py-20">
+          {CARDS.map((card, index) => (
+            <ExperienceCard
+              key={card.company}
+              {...card}
+              showDivider={index < CARDS.length - 1}
+            />
+          ))}
+        </div>
 
-      <HorizontalDivider className="mb-20 max-w-screen-lg" />
+        <HorizontalDivider className="mb-20 max-w-screen-lg" />
 
-      <div className="flex justify-center text-xl">
-        <ResumePanel className="w-auto" iconClassName="text-5xl mt-4" />
-      </div>
+        <div className="flex justify-center text-xl">
+          <ResumePanel className="w-auto" iconClassName="text-5xl mt-4" />
+        </div>
+      </FadeInContainer>
     </PageSection>
   );
 };

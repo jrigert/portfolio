@@ -13,7 +13,7 @@ export const SkillCard: FunctionComponent<SkillCardProps> = (props) => {
   return (
     <div
       className={classNames(
-        'flex flex-col justify-between rounded-md border-2 border-secondary px-4 py-2 font-semibold transition duration-500 hover:bg-secondary/10 motion-safe:hover:scale-110 motion-reduce:transition-opacity',
+        'flex flex-col justify-between rounded-md border-2 border-secondary px-4 py-2 font-semibold',
         className,
       )}
     >
