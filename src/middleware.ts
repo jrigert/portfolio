@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const { AUTH_USERNAME, AUTH_PASSWORD } = process.env;
+const { AUTH_USERNAME, AUTH_PASSWORD, SKIP_AUTH } = process.env;
 
 export const config = {
   matcher: ['/'],
 };
 
 export function middleware(req: NextRequest) {
+  if (SKIP_AUTH === 'true') {
+    return NextResponse.next();
+  }
+
   const basicAuth = req.headers.get('authorization');
   const url = req.nextUrl;
 

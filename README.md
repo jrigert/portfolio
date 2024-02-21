@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   - Remove robots
 - README:
   - Document .env variables
+- update TTL?
 
 ## Getting Started
 
