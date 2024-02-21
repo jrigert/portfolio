@@ -4,7 +4,7 @@ import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { ImageCircle } from '@/components/core/ImageCircle';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
-import { HomePageSectionProps } from '@/pages/home/index';
+import { HomePageSectionProps } from '@/components/pages/home/index';
 import type { FunctionComponent } from 'react';
 
 export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {

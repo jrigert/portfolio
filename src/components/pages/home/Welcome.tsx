@@ -6,7 +6,7 @@ import { Underline } from '@/components/core/Underline';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
 import { useAnimate } from '@/hooks/animation/useAnimate';
-import { HomePageSectionProps } from '@/pages/home/index';
+import { HomePageSectionProps } from '@/components/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import type { FunctionComponent } from 'react';
 

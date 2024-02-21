@@ -7,7 +7,7 @@ import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { SkillCard, SkillCardProps } from '@/components/SkillCard';
 import { useInterval } from '@/hooks/useInterval';
 import { useOnEnterViewport } from '@/hooks/useOnEnterViewport';
-import { HomePageSectionProps } from '@/pages/home/index';
+import { HomePageSectionProps } from '@/components/pages/home/index';
 import { classNames } from '@/utils/style';
 import { FunctionComponent, useMemo, useState } from 'react';
 

@@ -1,9 +1,9 @@
-import { HomePageSectionProps } from '@/pages/home';
-import { HomeAbout } from '@/pages/home/About';
-import { HomeExperience } from '@/pages/home/Experience';
-import { HomeMore } from '@/pages/home/HomeMore';
-import { HomeSkills } from '@/pages/home/Skills';
-import { HomeWelcome } from '@/pages/home/Welcome';
+import { HomePageSectionProps } from '@/components/pages/home';
+import { HomeAbout } from '@/components/pages/home/About';
+import { HomeExperience } from '@/components/pages/home/Experience';
+import { HomeMore } from '@/components/pages/home/HomeMore';
+import { HomeSkills } from '@/components/pages/home/Skills';
+import { HomeWelcome } from '@/components/pages/home/Welcome';
 import { FunctionComponent } from 'react';
 
 export interface HomepageSection {

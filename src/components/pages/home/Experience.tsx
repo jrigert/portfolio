@@ -8,7 +8,7 @@ import {
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
 import { ResumePanel } from '@/components/ResumePanel';
-import { HomePageSectionProps } from '@/pages/home/index';
+import { HomePageSectionProps } from '@/components/pages/home/index';
 import type { FunctionComponent } from 'react';
 
 const CARDS: ExperienceCardData[] = [

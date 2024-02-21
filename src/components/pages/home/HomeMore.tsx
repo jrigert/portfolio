@@ -5,7 +5,7 @@ import { Badge } from '@/components/core/Badge';
 import { Heading } from '@/components/core/Heading';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
-import { HomePageSectionProps } from '@/pages/home/index';
+import { HomePageSectionProps } from '@/components/pages/home/index';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
   faBaby,
