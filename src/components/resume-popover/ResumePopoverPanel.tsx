@@ -21,7 +21,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
       <Popover.Trigger asChild>
         <Button
           size="icon"
-          color="primary"
+          color="loud"
           className={classNames(
             'fixed bottom-5 right-5 h-12 w-12 rounded-full transition duration-500 ease-out motion-safe:hover:scale-110 motion-reduce:transition-none',
             animationClass,
@@ -35,14 +35,14 @@ export const ResumePopoverPanel: FunctionComponent = () => {
       </Popover.Anchor>
       <Popover.Portal>
         <Popover.Content
-          className="rounded-lg border-2 border-foreground/70 bg-background/70 px-12 pb-8 pt-5 text-foreground backdrop-blur"
+          className="border border-foreground-secondary bg-background-secondary px-12 pb-12 pt-5 text-foreground-secondary backdrop-blur"
           sideOffset={10}
           align="end"
         >
           <Popover.Close className="absolute right-2 top-1" aria-label="Close">
             <FontAwesomeIcon
               icon={faX}
-              className="text-2xl transition-transform motion-safe:hover:scale-125 motion-reduce:transition-none"
+              className="text-3xl transition-transform motion-safe:hover:scale-125 motion-reduce:transition-none"
             />
           </Popover.Close>
 
@@ -50,11 +50,14 @@ export const ResumePopoverPanel: FunctionComponent = () => {
             <p className="mb-2 text-center font-heading font-semibold">
               Contact Me
             </p>
-            <ContactIcons showGitHub={false} className="gap-8" />
+            <ContactIcons
+              showGitHub={false}
+              className="gap-8"
+              iconClassName="text-6xl"
+            />
           </div>
 
-          <ResumePanel className="mt-8" />
-          <Popover.Arrow className="mt-px h-2 w-3 fill-foreground/70" />
+          <ResumePanel className="mt-8" iconClassName="text-6xl" />
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>

@@ -1,4 +1,4 @@
-import { Space_Grotesk, Noto_Sans as HeadingFont } from 'next/font/google';
+import { Space_Grotesk, Raleway as HeadingFont } from 'next/font/google';
 
 const body = Space_Grotesk({
   subsets: ['latin'],

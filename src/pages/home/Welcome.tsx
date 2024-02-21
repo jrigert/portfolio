@@ -47,7 +47,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         tag="h1"
         className={classNames(
           headingSharedClasses,
-          'relative mb-0',
+          'relative mb-0 tracking-wide',
           h1AnimationClass,
         )}
       >
@@ -58,7 +58,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
         aria-label="Web Developer, Architect and Director"
         className={classNames(
           subHeadingClasses,
-          'mt-8 flex items-center text-center text-base sm:text-xl lg:text-3xl',
+          'mb-1 mt-6 flex items-center text-center text-base tracking-wide sm:mb-3 sm:mt-8 sm:text-xl lg:text-3xl',
           headingSharedClasses,
           h2AnimationClass,
         )}

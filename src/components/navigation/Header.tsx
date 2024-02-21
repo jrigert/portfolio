@@ -52,7 +52,7 @@ export const Header: FunctionComponent = () => {
           <Button
             variant="naked"
             size="icon"
-            className="absolute right-0 top-0 lg:hidden"
+            className="absolute right-0 top-0 text-dark-blue-foreground motion-safe:hover:scale-125 lg:hidden"
             onClick={closeMobileNav}
           >
             <FontAwesomeIcon icon={faX} />
