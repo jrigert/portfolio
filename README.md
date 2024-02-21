@@ -5,6 +5,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - New image
 - double check lint and types
 - resume downloads
+- PRODUCTION:
+  - Remove authentication
+  - Remove robots
+- README:
+  - Document .env variables
 
 ## Getting Started
 
