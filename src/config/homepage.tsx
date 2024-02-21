@@ -1,7 +1,7 @@
 import { HomePageSectionProps } from '@/components/pages/home';
 import { HomeAbout } from '@/components/pages/home/About';
 import { HomeExperience } from '@/components/pages/home/Experience';
-import { HomeMore } from '@/components/pages/home/HomeMore';
+import { HomeBonus } from '@/components/pages/home/HomeBonus';
 import { HomeSkills } from '@/components/pages/home/Skills';
 import { HomeWelcome } from '@/components/pages/home/Welcome';
 import { FunctionComponent } from 'react';
@@ -39,9 +39,9 @@ export const HOMEPAGE_CONFIG: HomepageConfig = {
       Component: HomeExperience,
     },
     {
-      linkLabel: 'More',
-      id: 'more',
-      Component: HomeMore,
+      linkLabel: 'Bonus',
+      id: 'bonus',
+      Component: HomeBonus,
     },
   ],
 } as const;

@@ -24,6 +24,9 @@ export const PageSectionHeading: FunctionComponent<PageSectionHeadingProps> = (
       'translate-y-8': enterAnimation === 'vertical',
     }),
     enterClassName: 'opacity-100 translate-x-0 translate-y-0',
+    intersectOptions: {
+      threshold: 0.4,
+    },
   });
 
   return (

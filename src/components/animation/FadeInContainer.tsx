@@ -16,7 +16,7 @@ export const FadeInContainer: FunctionComponent<
     initialClassName: 'opacity-0',
     enterClassName: 'opacity-100',
     intersectOptions: {
-      threshold: 0.1,
+      threshold,
     },
   });
 

@@ -29,22 +29,22 @@ interface PersonalInfoItem {
 const PERSONAL_INFO: PersonalInfoItem[] = [
   { icon: faBaby, label: 'Father' },
   { icon: faDog, label: 'Dog Dad' },
-  { icon: faGamepad, label: 'Gamer' },
-  { icon: faBook, label: 'Reader' },
+  { icon: faGamepad, label: 'Games' },
+  { icon: faBook, label: 'Reading' },
   { icon: faDumbbell, label: 'Fitness' },
   { icon: faHiking, label: 'Hiking' },
   { icon: faCampground, label: 'Camping' },
   { icon: faDiceD20, label: 'D&D' },
-  { icon: faPuzzlePiece, label: 'Puzzles' },
   { icon: faChessBoard, label: 'Board Games' },
+  { icon: faPuzzlePiece, label: 'Puzzles' },
 ];
 
-export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
+export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
 
   return (
     <PageSection id={id} className="pb-40">
-      <PageSectionHeading title="More About Me" />
+      <PageSectionHeading title="Bonus Content" />
 
       <FadeInContainer>
         <Heading
@@ -55,10 +55,14 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           Personal Info
         </Heading>
 
-        <ul className="mx-auto flex max-w-2xl flex-wrap justify-center gap-6">
+        <ul className="mx-auto grid max-w-2xl grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:justify-center">
           {PERSONAL_INFO.map(({ label, icon }) => (
             <li key={label}>
-              <Badge icon={icon} label={label} />
+              <Badge
+                className="h-full w-full text-center sm:h-auto sm:w-auto"
+                icon={icon}
+                label={label}
+              />
             </li>
           ))}
         </ul>
@@ -76,6 +80,16 @@ export const HomeMore: FunctionComponent<HomePageSectionProps> = (props) => {
           <p className="text-primary">DeVry University</p>
           <p>2005 - 2009</p>
         </div>
+
+        <Heading
+          tag="h3"
+          wrapperClassName="mb-6 mt-40 justify-center"
+          underline
+        >
+          About This Site
+        </Heading>
+
+        <p className="text-center">TODO: Details about this portfolio :)</p>
       </FadeInContainer>
     </PageSection>
   );

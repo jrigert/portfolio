@@ -81,7 +81,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
     <PageSection id={id} fullHeight variant="secondary" className="pb-20">
       <PageSectionHeading title="Experience" />
 
-      <FadeInContainer>
+      <FadeInContainer threshold={0.08}>
         <div className="mx-auto max-w-screen-lg py-12 sm:py-20">
           {CARDS.map((card, index) => (
             <ExperienceCard
