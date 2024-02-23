@@ -18,7 +18,7 @@ export const SkillCard: FunctionComponent<SkillCardProps> = (props) => {
       )}
     >
       <div>
-        <p className="mx-auto inline-block font-heading text-xl text-primary underline">
+        <p className="mx-auto inline-block font-heading text-xl text-primary">
           {title}
         </p>
         <p className="mt-3">{description}</p>
