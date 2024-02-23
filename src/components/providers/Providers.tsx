@@ -7,7 +7,7 @@ import { FunctionComponent, PropsWithChildren } from 'react';
 export const Providers: FunctionComponent<PropsWithChildren> = (props) => {
   const { children } = props;
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="system">
       <ScrollProvider>{children}</ScrollProvider>
     </ThemeProvider>
   );
