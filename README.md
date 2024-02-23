@@ -11,6 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - README:
   - Document .env variables
 - update TTL?
+- more themes?
 
 ## Getting Started
 

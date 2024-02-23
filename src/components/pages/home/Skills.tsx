@@ -26,7 +26,7 @@ const SKILLS: SkillCardProps[] = [
   },
   {
     title: 'API Integration',
-    description: 'Apollo Client, react-query',
+    description: 'Apollo Client, react-query, RTK Query, Axios',
   },
   {
     title: 'Tools',
@@ -34,7 +34,7 @@ const SKILLS: SkillCardProps[] = [
   },
   {
     title: 'Styling',
-    description: 'CSS, SASS, Tailwind, Storybook',
+    description: 'CSS, SASS, Tailwind, CSS-in-JS, Storybook',
   },
   {
     title: 'API Development',
@@ -63,6 +63,8 @@ const ADDITIONAL_SKILLS = [
   'Gatsby',
   'Zustand',
   'Fastlane',
+  'Firebase',
+  'Remix',
 ];
 
 // time between when each item animation triggers
