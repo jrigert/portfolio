@@ -1,15 +1,12 @@
 import { Underline, UnderlineVariant } from '@/components/core/Underline';
+import { HTMLHeadingProps } from '@/types/props';
 import { classNames, getHeadingClasses } from '@/utils/style';
 import React, { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 
 export const VALID_HEADINGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
 export type HeadingLevel = (typeof VALID_HEADINGS)[number];
 
-export interface HeadingProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLHeadingElement>,
-    HTMLHeadingElement
-  > {
+export interface HeadingProps extends HTMLHeadingProps {
   tag: HeadingLevel;
   tagStyle?: HeadingLevel;
   underline?: boolean;

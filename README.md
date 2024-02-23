@@ -12,6 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   - Document .env variables
 - update TTL?
 - more themes?
+- lighthouse audit
 
 ## Getting Started
 

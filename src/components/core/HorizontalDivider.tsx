@@ -1,17 +1,10 @@
+import { HTMLHRProps } from '@/types/props';
 import { classNames } from '@/utils/style';
 import { cva, VariantProps } from 'class-variance-authority';
-import {
-  DetailedHTMLProps,
-  FunctionComponent,
-  HTMLAttributes,
-  useMemo,
-} from 'react';
+import { FunctionComponent, useMemo } from 'react';
 
 export interface HorizontalDividerProps
-  extends Omit<
-      DetailedHTMLProps<HTMLAttributes<HTMLHRElement>, HTMLHRElement>,
-      'color'
-    >,
+  extends Omit<HTMLHRProps, 'color'>,
     HorizontalDividerVariantProps {}
 
 export type HorizontalDividerVariantProps = VariantProps<

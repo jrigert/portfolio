@@ -1,14 +1,8 @@
+import { HTMLDivProps } from '@/types/props';
 import { classNames } from '@/utils/style';
-import {
-  DetailedHTMLProps,
-  FunctionComponent,
-  HTMLAttributes,
-  PropsWithChildren,
-  useMemo,
-} from 'react';
+import { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 
-export interface ContainerProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface ContainerProps extends HTMLDivProps {
   center?: boolean;
   fullHeight?: boolean;
 }

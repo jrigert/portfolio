@@ -1,3 +1,4 @@
+import { ExternalLink } from '@/components/core/ExternalLink';
 import { InteractiveIcon } from '@/components/core/InteractiveIcon';
 import { WithClassName } from '@/types/props';
 import { classNames } from '@/utils/style';
@@ -20,31 +21,28 @@ export const ContactIcons: FunctionComponent<ContactIconsProps> = (props) => {
         className,
       )}
     >
-      <a
+      <ExternalLink
         href="mailto:jonrigert@gmail.com?subject=Hi Jon!"
         aria-label="Send me an email. Opens your default email client"
+        newTab={false}
       >
         <InteractiveIcon icon={faEnvelope} className={iconClassName} />
-      </a>
+      </ExternalLink>
 
-      <a
+      <ExternalLink
         href="https://www.linkedin.com/in/jonathonrigert"
-        aria-label="View my LinkedIn Profile. Opens in a new tab"
-        target="_blank"
-        rel="noopener"
+        aria-label="View my LinkedIn Profile"
       >
         <InteractiveIcon icon={faLinkedin} className={iconClassName} />
-      </a>
+      </ExternalLink>
 
       {showGitHub ? (
-        <a
+        <ExternalLink
           href="https://github.com/jrigert"
-          aria-label="View my GitHub. Opens in a new tab"
-          target="_blank"
-          rel="noopener"
+          aria-label="View my GitHub"
         >
           <InteractiveIcon icon={faGithub} className={iconClassName} />
-        </a>
+        </ExternalLink>
       ) : null}
     </div>
   );

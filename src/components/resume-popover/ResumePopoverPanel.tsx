@@ -20,6 +20,7 @@ export const ResumePopoverPanel: FunctionComponent = () => {
     <Popover.Root>
       <Popover.Trigger asChild>
         <Button
+          aria-label="Opens a panel with links to my contact information and resume"
           size="icon"
           color="loud"
           className={classNames(

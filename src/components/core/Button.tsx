@@ -1,27 +1,16 @@
 'use client';
 
+import { HTMLButtonProps } from '@/types/props';
 import { classNames } from '@/utils/style';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { cva, VariantProps } from 'class-variance-authority';
-import {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  forwardRef,
-  PropsWithChildren,
-  useMemo,
-} from 'react';
+import { forwardRef, PropsWithChildren, useMemo } from 'react';
 
 export type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
-  extends Omit<
-      DetailedHTMLProps<
-        ButtonHTMLAttributes<HTMLButtonElement>,
-        HTMLButtonElement
-      >,
-      'color'
-    >,
+  extends Omit<HTMLButtonProps, 'color'>,
     ButtonVariantProps {
   icon?: IconDefinition;
 }

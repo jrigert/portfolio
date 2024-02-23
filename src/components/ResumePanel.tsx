@@ -1,3 +1,4 @@
+import { ExternalLink } from '@/components/core/ExternalLink';
 import { InteractiveIcon } from '@/components/core/InteractiveIcon';
 import { WithClassName } from '@/types/props';
 import { classNames } from '@/utils/style';
@@ -14,11 +15,22 @@ const ResumeButtons: FunctionComponent<{
 }> = ({ iconClassName }) => {
   return (
     <>
-      <InteractiveIcon
-        icon={faFilePdf}
-        className={classNames('mr-8', iconClassName)}
-      />
-      <InteractiveIcon icon={faFileWord} className={iconClassName} />
+      <ExternalLink
+        href="/documents/resume.pdf"
+        aria-label="View my resume in PDF format"
+      >
+        <InteractiveIcon
+          icon={faFilePdf}
+          className={classNames('mr-8', iconClassName)}
+        />
+      </ExternalLink>
+
+      <ExternalLink
+        href="/documents/resume.docx"
+        aria-label="View my resume in Word (docx) format"
+      >
+        <InteractiveIcon icon={faFileWord} className={iconClassName} />
+      </ExternalLink>
     </>
   );
 };
