@@ -47,12 +47,16 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
 
       {previousPositions ? (
         <div className="mt-12 text-sm">
-          <div className="font-heading font-bold">Previous Positions:</div>
+          <div className="high-contrast:underline font-heading font-bold">
+            Previous Positions:
+          </div>
 
           <ul className="max-w-screen-md">
             {previousPositions.map(({ title, startDate, endDate }) => (
               <li key={startDate} className="my-2 grid grid-cols-2 gap-10">
-                <span className="text-primary">{title}</span>
+                <span className="high-contrast:text-black high-contrast:font-bold text-primary">
+                  {title}
+                </span>
                 {startDate} - {endDate}
               </li>
             ))}

@@ -8,6 +8,7 @@ import { HOMEPAGE_CONFIG } from '@/config/homepage';
 import { useMobileNav } from '@/hooks/useMobileNav';
 import { classNames } from '@/utils/style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FunctionComponent } from 'react';
@@ -18,6 +19,7 @@ const { sections } = HOMEPAGE_CONFIG;
 export const Header: FunctionComponent = () => {
   const { animationState, registerNavRef, toggleMobileNav, closeMobileNav } =
     useMobileNav();
+  const { theme } = useTheme();
 
   return (
     <header
@@ -31,7 +33,11 @@ export const Header: FunctionComponent = () => {
           onClick={closeMobileNav}
         >
           <Image
-            src="/images/logo.svg"
+            src={
+              theme === 'highContrast'
+                ? '/images/logo-white.svg'
+                : '/images/logo.svg'
+            }
             alt="JR: Click to return home"
             width={50}
             height={33}

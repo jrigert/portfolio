@@ -5,11 +5,14 @@
 @layer base {
   :root {
     --white: 245, 245, 245;
-    --cyan: 24, 90, 114;
+    --cyan-dark: 25, 80, 107;
+    --cyan: 31, 116, 147;
     --cyan-light: 71, 180, 220;
-    --cyan-lightest: 219, 236, 240;
-    --green: 77, 139, 49;
-    --orange: 255, 132, 39;
+    --cyan-lightest: 226, 240, 243;
+    --green: 72, 125, 44;
+    --orange-dark: 128, 55, 0;
+    --orange: 179, 77, 0;
+    --orange-light: 255, 132, 39;
     --black: 22, 15, 15;
     --gray: 49, 47, 47;
     --gray-foreground: var(--white);
@@ -32,6 +35,7 @@
   }
 
   html.dark {
+    --orange: var(--orange-light);
     --cyan: var(--cyan-light);
 
     --background: var(--black);
@@ -39,6 +43,11 @@
 
     --background-secondary: var(--dark-blue);
     --foreground-secondary: var(--dark-blue-foreground);
+  }
+
+  html.highContrast {
+    --cyan: var(--cyan-dark);
+    --orange: var(--orange-dark);
   }
 }
 

@@ -37,7 +37,10 @@ export const PageSection: FunctionComponent<PageSectionProps> = (props) => {
   const wrapperClassNames = useMemo(
     () =>
       classNames(
-        { 'bg-background-secondary': variant === 'secondary' },
+        variant === 'secondary' && [
+          'bg-background-secondary',
+          'light:[--primary:--cyan-dark]',
+        ],
         wrapperClassName,
       ),
     [variant, wrapperClassName],
