@@ -26,12 +26,12 @@ export const Popover: FunctionComponent<PropsWithChildren<PopoverProps>> = (
 
       <RadixPopover.Portal>
         <RadixPopover.Content
-          className="border border-foreground-secondary bg-background-secondary px-12 pb-12 pt-5 text-foreground-secondary"
+          className="rounded-xl border border-foreground-secondary bg-background-secondary px-8 pb-12 pt-5 text-foreground-secondary shadow-lg shadow-black/50 dark:shadow-gray-400/30"
           sideOffset={10}
           align="end"
         >
           <RadixPopover.Close
-            className="absolute right-2 top-1"
+            className="absolute right-3 top-2"
             aria-label="Close Panel"
           >
             <FontAwesomeIcon
@@ -41,6 +41,8 @@ export const Popover: FunctionComponent<PropsWithChildren<PopoverProps>> = (
           </RadixPopover.Close>
 
           <div className="pt-6">{children}</div>
+
+          <RadixPopover.Arrow className="fill-foreground-secondary" />
         </RadixPopover.Content>
       </RadixPopover.Portal>
     </RadixPopover.Root>
