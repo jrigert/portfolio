@@ -41,6 +41,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
         alt={alt}
         {...imageProps}
         fill={true}
+        sizes="224px"
       />
     </div>
   );
