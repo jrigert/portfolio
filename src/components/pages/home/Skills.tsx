@@ -21,20 +21,20 @@ const SKILLS: SkillCardProps[] = [
     description: 'NextJS, Functional Programming, React Native',
   },
   {
-    title: 'State Management',
-    description: 'Redux, Context API',
-  },
-  {
     title: 'API Integration',
-    description: 'Apollo Client, react-query, RTK Query, Axios',
+    description: 'Apollo Client, React Query, RTK Query, Axios',
   },
   {
     title: 'Tools',
-    description: 'TypeScript, TurboRepo, Unit Testing',
+    description: 'TypeScript, TurboRepo, Redux / Redux Saga',
+  },
+  {
+    title: 'Unit Testing',
+    description: 'jest, vitest, React Testing Library',
   },
   {
     title: 'Styling',
-    description: 'CSS, SASS, Tailwind, CSS-in-JS, Storybook',
+    description: 'Tailwind, CSS, SASS, CSS-in-JS, Storybook',
   },
   {
     title: 'API Development',
@@ -51,6 +51,10 @@ const SKILLS: SkillCardProps[] = [
   {
     title: 'CI/CD',
     description: 'GitHub Actions, Bitbucket Pipelines, Azure Dev Ops, Jenkins',
+  },
+  {
+    title: 'Tooling',
+    description: 'Vite, tsup',
   },
 ];
 
@@ -142,14 +146,14 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
           </Heading>
         </div>
 
-        <div className="mx-auto max-w-screen-md">
-          <p className="mt-8 sm:text-lg">
+        <div>
+          <p className="mx-auto mt-8 max-w-screen-lg sm:text-lg">
             Here are some more areas I have dabbled in. I am probably rusty, or
             just not very experienced, so I did not want to list these as true
             skills:
           </p>
 
-          <ul className="mt-16 flex flex-wrap justify-center">
+          <ul className="mx-auto mt-16 flex max-w-screen-md flex-wrap justify-center">
             {ADDITIONAL_SKILLS.map((skill) => (
               <li
                 key={skill}

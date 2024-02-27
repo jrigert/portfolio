@@ -12,6 +12,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - update TTL?
 - more themes?
 - lighthouse audit
+- metadata for sharing?
+- screenreader testing
 
 ## Getting Started
 

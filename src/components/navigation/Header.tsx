@@ -17,9 +17,15 @@ import { faBars, faXmark as faX } from '@fortawesome/free-solid-svg-icons';
 const { sections } = HOMEPAGE_CONFIG;
 
 export const Header: FunctionComponent = () => {
-  const { animationState, registerNavRef, toggleMobileNav, closeMobileNav } =
-    useMobileNav();
+  const {
+    animationState,
+    registerNavRef,
+    shouldShowMobileNav,
+    toggleMobileNav,
+    closeMobileNav,
+  } = useMobileNav();
   const { theme } = useTheme();
+  const menuToggleHelperText = `${shouldShowMobileNav ? 'Close' : 'Open'} Navigation Panel`;
 
   return (
     <header
@@ -59,6 +65,7 @@ export const Header: FunctionComponent = () => {
             variant="naked"
             size="icon"
             className="absolute right-0 top-0 text-dark-blue-foreground motion-safe:hover:scale-125 lg:hidden"
+            aria-label="Close Navigation Panel"
             onClick={closeMobileNav}
           >
             <FontAwesomeIcon icon={faX} />
@@ -87,6 +94,7 @@ export const Header: FunctionComponent = () => {
             size="icon"
             color="default-on-dark"
             onClick={toggleMobileNav}
+            aria-label={menuToggleHelperText}
           >
             <FontAwesomeIcon icon={faBars} />
           </Button>
