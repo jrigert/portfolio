@@ -7,13 +7,13 @@ const { sections } = HOMEPAGE_CONFIG;
 export const HomePage: FunctionComponent = () => {
   return (
     <main>
+      <ResumePopoverPanel />
+
       {sections.map(({ id, Component }) => (
         <section key={id}>
           <Component id={id} />
         </section>
       ))}
-
-      <ResumePopoverPanel />
     </main>
   );
 };

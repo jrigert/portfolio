@@ -1,5 +1,6 @@
 'use client';
 
+import { useRegisterRef } from '@/hooks/useRegisterRef';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface UseOnEnterViewportProps {
@@ -20,9 +21,12 @@ export const useOnEnterViewport = (props: UseOnEnterViewportProps = {}) => {
     intersectOptions = { threshold: 1 },
   } = props;
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const elementRef = useRef<HTMLElement | null>();
   const hasEnteredRef = useRef(false);
   const [hasEntered, setHasEntered] = useState(false);
+
+  const { elementRef, registerRef } = useRegisterRef(() => {
+    initializeObserver();
+  });
 
   const updateHasEntered = (value: boolean) => {
     hasEnteredRef.current = value;
@@ -64,11 +68,6 @@ export const useOnEnterViewport = (props: UseOnEnterViewportProps = {}) => {
     );
     observerRef.current = observer;
     observer.observe(element);
-  }, []);
-
-  const registerRef = useCallback((element: HTMLElement | null) => {
-    elementRef.current = element;
-    initializeObserver();
   }, []);
 
   useEffect(() => {

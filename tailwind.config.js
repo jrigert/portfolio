@@ -55,6 +55,18 @@ module.exports = {
         1500: '1500ms',
         2000: '2000ms',
       },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0)' },
+          '25%': { transform: 'rotate(15deg)' },
+          '50%': { transform: 'rotate(-15deg)' },
+          '75%': { transform: 'rotate(7deg)' },
+          '100%': { transform: 'rotate(0)' },
+        },
+      },
+      animation: {
+        wave: 'wave 750ms ease-in-out',
+      },
     },
   },
   plugins: [

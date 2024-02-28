@@ -39,7 +39,7 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
 
   return (
     <PageSection
-      className="mt-12 flex flex-shrink-0 flex-col items-center justify-center"
+      className="flex flex-shrink-0 flex-col items-center justify-center"
       id={id}
       fullHeight
     >

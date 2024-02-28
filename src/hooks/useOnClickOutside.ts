@@ -1,11 +1,8 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useRegisterRef } from '@/hooks/useRegisterRef';
+import { useEffect } from 'react';
 
 export const useOnClickOutside = (callback: () => void) => {
-  const elementRef = useRef<HTMLElement | null>();
-
-  const registerRef = useCallback((element: HTMLElement | null) => {
-    elementRef.current = element;
-  }, []);
+  const { elementRef, registerRef } = useRegisterRef();
 
   useEffect(() => {
     const handleMouseDown = (event: MouseEvent) => {
