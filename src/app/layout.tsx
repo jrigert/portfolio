@@ -12,10 +12,22 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 // see docs: https://fontawesome.com/docs/web/use-with/react/use-with
 config.autoAddCss = false;
 
-export const metadata: Metadata = {
+const baseMetaData = {
   title: 'Jon Rigert',
   description:
     'Professional portfolio for Jon Rigert - Web Developer, Architect and Director',
+} as const;
+
+export const metadata: Metadata = {
+  ...baseMetaData,
+  openGraph: {
+    // ...baseMetaData,
+    type: 'profile',
+    url: 'https://www.jonrigert.com',
+    firstName: 'Jon',
+    lastName: 'Rigert',
+    gender: 'male',
+  },
 };
 
 const fontVariableClassNames = `${fonts.body.variable} ${fonts.heading.variable}`;
