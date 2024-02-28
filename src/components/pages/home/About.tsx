@@ -16,15 +16,20 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
 
       <FadeInContainer className="vertical-spacing highlight-strong mx-auto mt-16 max-w-screen-md text-xl sm:mt-20">
         <p>
-          Hi! I&rsquo;m <strong>Jon</strong>. I am a web developer, architect,
-          team lead and director. With <strong>over a decade</strong> of
-          experience building web applications, I love creating usable web
-          applications with clean and scalable code.
+          Hi, I’m Jon! With over a decade of experience as a web developer,
+          architect, team lead, and director, I&#39;m dedicated to creating
+          user-friendly web applications with clean and scalable code.
         </p>
 
         <p>
-          I am passionate about inclusive and accessible web design and
-          implementation.
+          I have a passion for building clean, intuitive and accessible user
+          interfaces.
+        </p>
+
+        <p>
+          I&#39;m well-rounded when it comes to full stack development, but my
+          real specialty is frontend development and architecture, with an
+          emphasis on React.
         </p>
       </FadeInContainer>
 

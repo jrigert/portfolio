@@ -148,9 +148,9 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
 
         <div>
           <p className="mx-auto mt-8 max-w-screen-lg sm:text-lg">
-            Here are some more areas I have dabbled in. I am probably rusty, or
-            just not very experienced, so I did not want to list these as true
-            skills:
+            Here are some additional technologies I&#39;ve explored. I&#39;m
+            either a bit rusty or lack extensive experience in these areas, so I
+            didn&#39;t list them as primary skills:
           </p>
 
           <ul className="mx-auto mt-16 flex max-w-screen-md flex-wrap justify-center">
