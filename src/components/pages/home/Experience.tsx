@@ -1,6 +1,7 @@
 'use client';
 
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
+import { Heading } from '@/components/core/Heading';
 import { HorizontalDivider } from '@/components/core/HorizontalDivider';
 import {
   ExperienceCard,
@@ -19,8 +20,9 @@ const CARDS: ExperienceCardData[] = [
     startDate: 'July 2015',
     endDate: 'Present',
     description: [
-      'Oversight and escalation point on multiple ongoing projects',
-      'Leading initiative to establish practice-wide coding standards and best practices',
+      'Serves as the primary point of oversight and escalation on various projects, while leading initiatives to establish practice-wide coding standards and best practices',
+      'Collaborates closely with clients, provides leadership to development teams, and directs various internal projects',
+      'Works with a multitude of technologies, with a strong focus on React',
     ],
     previousPositions: [
       {
@@ -46,8 +48,9 @@ const CARDS: ExperienceCardData[] = [
     startDate: 'April 2014',
     endDate: 'July 2015',
     description: [
-      'Developed a large-scale digital health application in AngularJS, providing services to healthcare consumers and providers',
-      'Senior member of the Core/Foundational team that built the application framework which is consumed by many different development teams',
+      'Contributed to the development of a large-scale digital health application in AngularJS, providing services to healthcare consumers and providers',
+      'Senior member of the Core/Foundational team that constructed the application framework utilized by various development teams',
+      'Assisted in leading and developing the “Toolkit”, a JavaScript/AngularJS library that facilitates sharing of critical components across multiple web applications',
     ],
   },
   {
@@ -56,8 +59,9 @@ const CARDS: ExperienceCardData[] = [
     startDate: 'October 2012',
     endDate: 'March 2014',
     description: [
-      'Part of a small team developing the internal software system used by the sales and dispatch team, tracking and matching customer loads with carrier trucks',
+      'Member of the development team responsible for building an internal software system designed to track and align customer loads with carrier trucks, utilized by the sales and dispatch unit',
       'Implemented new features and maintained existing platforms in WPF, C# and VB.NET',
+      'Primarily responsible for most user interface development, collaborating closely with the design team to bring their concepts to life',
     ],
   },
   {
@@ -66,8 +70,8 @@ const CARDS: ExperienceCardData[] = [
     startDate: 'March 2010',
     endDate: 'September 2012',
     description: [
-      'Responsible for maintaining and updating insurance agency automation software applications in VB6 and VB.NET',
-      'Developed new features on existing applications, updated existing features, fixed defects and updated out-of-date assemblies and applications',
+      'Tasked with maintaining and updating insurance agency automation software in VB6 and VB.NET',
+      'Developed new features for existing applications, updated existing functionalities, remediated defects, and rebuilt out-of-date assemblies and applications using more modern technologies',
     ],
   },
 ];
@@ -92,10 +96,35 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
           ))}
         </div>
 
-        <HorizontalDivider className="mb-20 max-w-screen-lg" />
+        <HorizontalDivider />
+        <Heading tag="h2" wrapperClassName="mt-24 justify-center" underline>
+          Education
+        </Heading>
 
-        <div className="flex justify-center text-xl">
-          <ResumePanel className="w-auto" iconClassName="text-5xl mt-4" />
+        <div className="mx-auto mt-12 max-w-screen-lg text-center">
+          <Heading tag="h3" tagStyle="h4">
+            B.S. Game and Simulation Programming
+          </Heading>
+          <p className="mb-2 font-heading font-bold text-primary">
+            DeVry University
+          </p>
+          <p>2005 - 2009</p>
+        </div>
+
+        <Heading
+          tag="h2"
+          wrapperClassName="mb-6 mt-32 justify-center"
+          underline
+        >
+          Resume
+        </Heading>
+
+        <div className="flex justify-center">
+          <ResumePanel
+            className="w-auto"
+            iconClassName="text-5xl mt-4"
+            buttonsOnly
+          />
         </div>
       </FadeInContainer>
     </PageSection>

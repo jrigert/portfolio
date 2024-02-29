@@ -43,18 +43,18 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
       <div className="font-heading">
         {startDate} - {endDate}
       </div>
-      <p className="mt-12 sm:text-lg">{description.join('. ')}</p>
+      <p className="mt-12 sm:text-lg">{description.join('. ')}.</p>
 
       {previousPositions ? (
         <div className="mt-12 text-sm">
-          <div className="high-contrast:underline font-heading font-bold">
+          <div className="font-heading font-bold high-contrast:underline">
             Previous Positions:
           </div>
 
           <ul className="max-w-screen-md">
             {previousPositions.map(({ title, startDate, endDate }) => (
               <li key={startDate} className="my-2 grid grid-cols-2 gap-10">
-                <span className="high-contrast:text-black high-contrast:font-bold text-primary">
+                <span className="text-primary high-contrast:font-bold high-contrast:text-black">
                   {title}
                 </span>
                 {startDate} - {endDate}
@@ -64,7 +64,7 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
         </div>
       ) : null}
 
-      {showDivider ? <HorizontalDivider className="my-10 sm:my-20" /> : null}
+      {showDivider ? <HorizontalDivider className="my-10 sm:my-16" /> : null}
     </div>
   );
 };

@@ -49,7 +49,7 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
       <FadeInContainer>
         <Heading
           tag="h3"
-          wrapperClassName="mb-12 mt-24 justify-center"
+          wrapperClassName="mb-12 mt-32 justify-center"
           underline
         >
           Personal Info
@@ -66,20 +66,6 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
             </li>
           ))}
         </ul>
-
-        <Heading
-          tag="h3"
-          wrapperClassName="mb-6 mt-40 justify-center"
-          underline
-        >
-          Education
-        </Heading>
-
-        <div className="mx-auto mt-12 max-w-screen-lg text-center">
-          <Heading tag="h4">B.S. Game and Simulation Programming</Heading>
-          <p className="text-primary">DeVry University</p>
-          <p>2005 - 2009</p>
-        </div>
 
         <Heading
           tag="h3"

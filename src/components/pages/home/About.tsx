@@ -14,7 +14,10 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
     <PageSection id={id} variant="secondary" wrapperClassName="pb-20">
       <PageSectionHeading title="About Me" />
 
-      <FadeInContainer className="vertical-spacing highlight-strong mx-auto mt-16 max-w-screen-md text-xl sm:mt-20">
+      <FadeInContainer
+        className="vertical-spacing highlight-strong mx-auto mt-16 max-w-screen-md text-xl sm:mt-20"
+        threshold={0.05}
+      >
         <p>
           Hi, I’m Jon! With over a decade of experience as a web developer,
           architect, team lead, and director, I&#39;m dedicated to creating
