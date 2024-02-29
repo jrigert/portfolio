@@ -87,9 +87,7 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
   const [lastAnimatedIndex, setLastAnimatedIndex] = useState(-1);
 
   // entering the viewport starts the interval
-  const { hasEntered, registerRef } = useOnEnterViewport({
-    intersectOptions: { threshold: 0.1 },
-  });
+  const { hasEntered, registerRef } = useOnEnterViewport();
 
   // interval to trigger animation on each list item, one at a time
   const { clear: clearInterval } = useInterval(

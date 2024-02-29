@@ -10,7 +10,7 @@ export interface FadeInContainerProps extends WithClassName {
 export const FadeInContainer: FunctionComponent<
   PropsWithChildren<FadeInContainerProps>
 > = (props) => {
-  const { className, children, threshold = 0.1 } = props;
+  const { className, children, threshold = 0.05 } = props;
 
   const { className: animationClassName, registerRef } = useEnterAnimation({
     initialClassName: 'opacity-0',

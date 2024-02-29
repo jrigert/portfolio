@@ -18,7 +18,7 @@ export const useOnEnterViewport = (props: UseOnEnterViewportProps = {}) => {
   const {
     callback,
     singleUse = true,
-    intersectOptions = { threshold: 1 },
+    intersectOptions = { threshold: 0.05 },
   } = props;
   const observerRef = useRef<IntersectionObserver | null>(null);
   const hasEnteredRef = useRef(false);

@@ -6,7 +6,7 @@ import { useScrollContext } from '@/hooks/scroll/useScrollContext';
 import { classNames } from '@/utils/style';
 import { FunctionComponent, useMemo, useRef } from 'react';
 
-// threshold for when section should be considered active (50% of screen)
+// threshold for when section should be considered active and highlight in the navigation (50% of screen)
 const ACTIVE_SCROLL_THRESHOLD = 0.5;
 
 export interface PageSectionProps extends ContainerProps {
