@@ -13,7 +13,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
   const { alt, ...imageProps } = props;
   const { hasLoaded, onLoad } = useHasLoaded();
   const { hasEntered, registerRef } = useOnEnterViewport({
-    intersectOptions: { threshold: 0.8 },
+    intersectOptions: { threshold: 0.5 },
   });
 
   const animateIn = hasEntered && hasLoaded;
