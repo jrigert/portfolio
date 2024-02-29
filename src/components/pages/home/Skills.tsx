@@ -74,7 +74,7 @@ const ADDITIONAL_SKILLS = [
 ];
 
 // time between when each item animation triggers
-const ANIMATION_INTERVAL_DURATION = 150;
+const ANIMATION_INTERVAL_DURATION = 250;
 
 interface SkillComponentData extends SkillCardProps {
   containerClassName?: string;
