@@ -12,16 +12,17 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 // see docs: https://fontawesome.com/docs/web/use-with/react/use-with
 config.autoAddCss = false;
 
-const baseMetaData = {
+const titleDescriptionMetadata = {
   title: 'Jon Rigert',
   description:
     'Professional portfolio for Jon Rigert - Web Developer, Architect and Director',
 } as const;
 
 export const metadata: Metadata = {
-  ...baseMetaData,
+  ...titleDescriptionMetadata,
+  metadataBase: new URL('https://www.jonrigert.com'),
   openGraph: {
-    // ...baseMetaData,
+    ...titleDescriptionMetadata,
     type: 'profile',
     url: 'https://www.jonrigert.com',
     firstName: 'Jon',
