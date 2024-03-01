@@ -4,7 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - New image
 - double check lint and types
-- skip to main?
+- update icon buttons to actual buttons?
+- on Home component, should the id be on the section?
 - PRODUCTION:
   - Remove authentication
   - Remove robots

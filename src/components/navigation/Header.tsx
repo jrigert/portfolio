@@ -32,7 +32,14 @@ export const Header: FunctionComponent = () => {
       className="fixed left-0 top-0 z-10 w-full bg-dark-blue text-white shadow-xl shadow-black/40"
       ref={registerNavRef}
     >
-      <Container className={`flex h-14 items-center justify-between`}>
+      <Container className={`relative flex h-14 items-center justify-between`}>
+        <a
+          href={'/#main'}
+          className="absolute top-14 bg-background px-2 text-foreground [&:not(:focus)]:sr-only"
+        >
+          Skip to main content
+        </a>
+
         <Image
           src={
             theme === 'highContrast'

@@ -5,6 +5,7 @@ import { Heading } from '@/components/core/Heading';
 import { Underline } from '@/components/core/Underline';
 import { VerticalDivider } from '@/components/core/VerticalDivider';
 import { PageSection } from '@/components/PageSection';
+import { ResumePopoverPanel } from '@/components/resume-popover/ResumePopoverPanel';
 import { useAnimate } from '@/hooks/animation/useAnimate';
 import { HomePageSectionProps } from '@/components/pages/home/index';
 import { classNames, getHeadingClasses } from '@/utils/style';
@@ -81,6 +82,8 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
       >
         <ContactIcons />
       </div>
+
+      <ResumePopoverPanel />
     </PageSection>
   );
 };
