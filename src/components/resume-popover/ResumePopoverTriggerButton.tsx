@@ -19,7 +19,7 @@ export const ResumePopoverTriggerButton = forwardRef<HTMLButtonElement>(
       () => {
         setPlayWaveAnimation(true);
       },
-      500,
+      1000,
       { begin: animateFadeIn },
     );
 

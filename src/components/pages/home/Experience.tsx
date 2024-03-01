@@ -20,7 +20,7 @@ const CARDS: ExperienceCardData[] = [
     startDate: 'July 2015',
     endDate: 'Present',
     description: [
-      'Serves as the primary point of oversight and escalation on various projects, while leading initiatives to establish practice-wide coding standards and best practices',
+      'Serves as the primary point of oversight and escalation on several projects, while leading initiatives to establish practice-wide coding standards and best practices',
       'Collaborates closely with clients, provides leadership to development teams, and directs various internal projects',
       'Works with a multitude of technologies, with a strong focus on React',
     ],
@@ -61,7 +61,7 @@ const CARDS: ExperienceCardData[] = [
     description: [
       'Member of the development team responsible for building an internal software system designed to track and align customer loads with carrier trucks, utilized by the sales and dispatch unit',
       'Implemented new features and maintained existing platforms in WPF, C# and VB.NET',
-      'Primarily responsible for most user interface development, collaborating closely with the design team to bring their concepts to life',
+      'Primarily responsible for most user interface development, collaborating closely with the design team to bring concepts to life',
     ],
   },
   {

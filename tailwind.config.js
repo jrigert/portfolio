@@ -58,14 +58,12 @@ module.exports = {
       keyframes: {
         wave: {
           '0%': { transform: 'translate(-0.375rem, 0) rotate(30deg)' },
-          '25%': { transform: 'translate(-0.175rem, 0) rotate(-30deg)' },
-          '50%': { transform: 'translate(0, 0) rotate(30deg)' },
-          '75%': { transform: 'translate(-0.175rem, 0) rotate(-30deg)' },
+          '50%': { transform: 'translate(0, 0) rotate(-30deg)' },
           '100%': { transform: 'translate(-0.375rem, 0) rotate(30deg)' },
         },
       },
       animation: {
-        wave: 'wave 750ms ease-in-out',
+        wave: 'wave 500ms ease-in-out',
       },
     },
   },
