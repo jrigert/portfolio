@@ -33,23 +33,17 @@ export const Header: FunctionComponent = () => {
       ref={registerNavRef}
     >
       <Container className={`flex h-14 items-center justify-between`}>
-        <Link
-          href={`/#${sections[0].id}`}
-          className="font-heading text-2xl font-bold text-primary"
-          onClick={closeMobileNav}
-        >
-          <Image
-            src={
-              theme === 'highContrast'
-                ? '/images/logo-white.svg'
-                : '/images/logo.svg'
-            }
-            alt="JR: Click to return home"
-            width={50}
-            height={30}
-            priority
-          />
-        </Link>
+        <Image
+          src={
+            theme === 'highContrast'
+              ? '/images/logo-white.svg'
+              : '/images/logo.svg'
+          }
+          alt="JR: Click to return home"
+          width={50}
+          height={30}
+          priority
+        />
 
         <nav
           role="navigation"

@@ -3,7 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODO
 
 - New image
-- move content to central location
 - double check lint and types
 - skip to main?
 - PRODUCTION:
