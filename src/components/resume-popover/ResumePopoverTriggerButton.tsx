@@ -47,7 +47,7 @@ export const ResumePopoverTriggerButton = forwardRef<HTMLButtonElement>(
         <FontAwesomeIcon
           icon={faHand}
           className={classNames(
-            'mt-1 origin-bottom text-2xl',
+            'origin-bottom -translate-x-1.5 translate-y-0 rotate-[30deg] text-2xl',
             hoverAnimationClass,
           )}
         />

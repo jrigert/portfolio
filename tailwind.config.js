@@ -57,11 +57,11 @@ module.exports = {
       },
       keyframes: {
         wave: {
-          '0%': { transform: 'rotate(0)' },
-          '25%': { transform: 'rotate(15deg)' },
-          '50%': { transform: 'rotate(-15deg)' },
-          '75%': { transform: 'rotate(7deg)' },
-          '100%': { transform: 'rotate(0)' },
+          '0%': { transform: 'translate(-0.375rem, 0) rotate(30deg)' },
+          '25%': { transform: 'translate(-0.175rem, 0) rotate(-30deg)' },
+          '50%': { transform: 'translate(0, 0) rotate(30deg)' },
+          '75%': { transform: 'translate(-0.175rem, 0) rotate(-30deg)' },
+          '100%': { transform: 'translate(-0.375rem, 0) rotate(30deg)' },
         },
       },
       animation: {

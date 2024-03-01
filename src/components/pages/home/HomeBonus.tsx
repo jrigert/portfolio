@@ -2,6 +2,7 @@
 
 import { FadeInContainer } from '@/components/animation/FadeInContainer';
 import { Badge } from '@/components/core/Badge';
+import { ExternalLink } from '@/components/core/ExternalLink';
 import { Heading } from '@/components/core/Heading';
 import { PageSection } from '@/components/PageSection';
 import { PageSectionHeading } from '@/components/PageSectionHeading';
@@ -19,7 +20,7 @@ import {
   faPuzzlePiece,
   faChessBoard,
 } from '@fortawesome/free-solid-svg-icons';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, PropsWithChildren } from 'react';
 
 interface PersonalInfoItem {
   label: string;
@@ -39,11 +40,21 @@ const PERSONAL_INFO: PersonalInfoItem[] = [
   { icon: faPuzzlePiece, label: 'Puzzles' },
 ];
 
+const TechStackListItem: FunctionComponent<PropsWithChildren> = (props) => {
+  const { children } = props;
+
+  return (
+    <li className="my-8">
+      <p className="text-xl">{children}</p>
+    </li>
+  );
+};
+
 export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
   const { id } = props;
 
   return (
-    <PageSection id={id} className="pb-40">
+    <PageSection id={id} className="pb-20">
       <PageSectionHeading title="Bonus Content" />
 
       <FadeInContainer>
@@ -75,7 +86,83 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
           About This Site
         </Heading>
 
-        <p className="text-center">TODO: Details about this portfolio :)</p>
+        <div>
+          <p className="mt-12 text-center">
+            Curious how I created this portfolio? Check out the tech stack
+            below!
+          </p>
+          <p className="mt-2 text-center">
+            Also feel free to{' '}
+            <ExternalLink
+              variant="primary"
+              href="https://github.com/jrigert/portfolio"
+            >
+              take a look at the code
+            </ExternalLink>
+            .
+          </p>
+
+          <ul className="mx-auto mt-16 max-w-lg list-disc pl-4">
+            <TechStackListItem>
+              <ExternalLink variant="primary" href="https://react.dev/">
+                React
+              </ExternalLink>{' '}
+              and{' '}
+              <ExternalLink variant="primary" href="https://nextjs.org/">
+                NextJS
+              </ExternalLink>{' '}
+              for the core framework
+            </TechStackListItem>
+
+            <TechStackListItem>
+              <ExternalLink
+                variant="primary"
+                href="https://www.typescriptlang.org/docs/"
+              >
+                Typescript
+              </ExternalLink>{' '}
+              for strict type safety
+            </TechStackListItem>
+
+            <TechStackListItem>
+              <ExternalLink variant="primary" href="https://tailwindcss.com/">
+                Tailwind
+              </ExternalLink>{' '}
+              for styling
+            </TechStackListItem>
+
+            <TechStackListItem>
+              <ExternalLink
+                variant="primary"
+                href="https://www.radix-ui.com/primitives/"
+              >
+                Radix Primitives
+              </ExternalLink>{' '}
+              for accessible popover and radio group components
+            </TechStackListItem>
+
+            <TechStackListItem>
+              <ExternalLink variant="primary" href="https://fontawesome.com/">
+                FontAwesome
+              </ExternalLink>{' '}
+              for various icons
+            </TechStackListItem>
+
+            <TechStackListItem>
+              <ExternalLink variant="primary" href="https://fonts.google.com/">
+                Google Fonts
+              </ExternalLink>{' '}
+              for typography
+            </TechStackListItem>
+
+            <TechStackListItem>
+              Hosted on{' '}
+              <ExternalLink variant="primary" href="https://vercel.com/">
+                Vercel
+              </ExternalLink>
+            </TechStackListItem>
+          </ul>
+        </div>
       </FadeInContainer>
     </PageSection>
   );
