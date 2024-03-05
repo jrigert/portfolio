@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     firstName: 'Jon',
     lastName: 'Rigert',
     gender: 'male',
+    images: ['https://www.jonrigert.com/images/logo.svg'],
   },
 };
 
