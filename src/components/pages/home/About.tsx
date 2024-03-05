@@ -15,25 +15,21 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
       <PageSectionHeading title="About Me" />
 
       <FadeInContainer className="vertical-spacing highlight-strong mx-auto mt-16 max-w-screen-md text-xl sm:mt-20">
-        <p>
-          Hi, I’m Jon! With over a decade of experience as a web developer,
-          architect, team lead, and director, I&#39;m dedicated to creating
+        <p className="mb-12 leading-8">
+          Hi, I&#39;m <span className="font-bold text-primary">Jon</span> - a
+          web developer with over a decade of experience. I&#39;m also a web
+          architect, team lead, and Director, dedicated to creating
           user-friendly web applications with clean and scalable code.
         </p>
 
-        <p>
-          I have a passion for building clean, intuitive and accessible user
-          interfaces.
-        </p>
-
-        <p>
-          I&#39;m well-rounded when it comes to full stack development, but my
-          real specialty is frontend development and architecture, with an
-          emphasis on React.
+        <p className="mb-24 leading-8">
+          I&#39;m well-versed in full stack development, but my specialty is in
+          frontend development and architecture, with a focus on React. I have a
+          passion for building clean, intuitive, and accessible user interfaces.
         </p>
       </FadeInContainer>
 
-      <div className="mt-16 flex justify-center">
+      <div className="flex justify-center">
         <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
       </div>
     </PageSection>

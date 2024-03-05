@@ -71,7 +71,7 @@ const CARDS: ExperienceCardData[] = [
     endDate: 'September 2012',
     description: [
       'Tasked with maintaining and updating insurance agency automation software in VB6 and VB.NET',
-      'Developed new features for existing applications, updated existing functionalities, remediated defects, and rebuilt out-of-date assemblies and applications using more modern technologies',
+      'Developed new features, updated existing features, remediated defects, and rebuilt out-of-date assemblies and applications using more modern technologies',
     ],
   },
 ];

@@ -30,7 +30,7 @@ export const ImageCircle: FunctionComponent<ImageCircleProps> = (props) => {
       )}
       ref={registerRef}
     >
-      <div className="absolute h-full w-full rounded-xl bg-primary opacity-60" />
+      <div className="absolute h-full w-full rounded-xl bg-primary opacity-70" />
 
       <Image
         className={classNames(

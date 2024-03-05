@@ -66,6 +66,10 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
           Personal Info
         </Heading>
 
+        <p className="mb-12 mt-12 text-center">
+          Here&#39;s some less-technical information about me and my hobbies:
+        </p>
+
         <ul className="mx-auto grid max-w-2xl grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:justify-center">
           {PERSONAL_INFO.map(({ label, icon }) => (
             <li key={label}>
@@ -80,7 +84,7 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
 
         <Heading
           tag="h3"
-          wrapperClassName="mb-6 mt-40 justify-center"
+          wrapperClassName="mb-6 mt-32 md:mt-40 justify-center"
           underline
         >
           About This Site

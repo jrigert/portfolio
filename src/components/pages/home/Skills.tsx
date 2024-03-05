@@ -21,20 +21,24 @@ const SKILLS: SkillCardProps[] = [
     description: 'NextJS, Functional Programming, React Native',
   },
   {
-    title: 'API Integration',
-    description: 'Apollo Client, React Query, RTK Query, Axios',
-  },
-  {
     title: 'Tools',
     description: 'TypeScript, TurboRepo, Redux / Redux Saga',
   },
   {
-    title: 'Unit Testing',
-    description: 'jest, vitest, React Testing Library',
-  },
-  {
     title: 'Styling',
     description: 'Tailwind, CSS, SASS, CSS-in-JS, Storybook',
+  },
+  {
+    title: 'Tooling',
+    description: 'Vite, tsup',
+  },
+  {
+    title: 'API Integration',
+    description: 'Apollo Client, React Query, RTK Query, Axios',
+  },
+  {
+    title: 'Unit Testing',
+    description: 'jest, vitest, React Testing Library',
   },
   {
     title: 'API Development',
@@ -42,7 +46,7 @@ const SKILLS: SkillCardProps[] = [
   },
   {
     title: 'Databases',
-    description: 'SQL, Mongo',
+    description: 'SQL, MongoDB',
   },
   {
     title: 'CMS',
@@ -51,10 +55,6 @@ const SKILLS: SkillCardProps[] = [
   {
     title: 'CI/CD',
     description: 'GitHub Actions, Bitbucket Pipelines, Azure Dev Ops, Jenkins',
-  },
-  {
-    title: 'Tooling',
-    description: 'Vite, tsup',
   },
 ];
 
@@ -149,8 +149,8 @@ export const HomeSkills: FunctionComponent<HomePageSectionProps> = (props) => {
         <div>
           <p className="mx-auto mt-8 max-w-screen-lg sm:text-lg">
             Here are some additional technologies I&#39;ve explored. I&#39;m
-            either a bit rusty or lack extensive experience in these areas, so I
-            didn&#39;t list them as primary skills:
+            either rusty or lack extensive experience in these areas, so I
+            didn&#39;t count them as primary skills:
           </p>
 
           <ul className="mx-auto mt-16 flex max-w-screen-md flex-wrap justify-center">
