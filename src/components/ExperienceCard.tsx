@@ -43,7 +43,14 @@ export const ExperienceCard: FunctionComponent<ExperienceCardProps> = (
       <div className="font-heading">
         {startDate} - {endDate}
       </div>
-      <p className="mt-12 sm:text-lg">{description.join('. ')}.</p>
+      <div className="mt-12 sm:text-lg">
+        {description.map((descriptionLine, index) => (
+          // normally I wouldn't use index as a key but this list will never change
+          <p className="mb-4" key={index}>
+            {descriptionLine}.
+          </p>
+        ))}
+      </div>
 
       {previousPositions ? (
         <div className="mt-12 text-sm">

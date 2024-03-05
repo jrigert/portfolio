@@ -45,7 +45,7 @@ const TechStackListItem: FunctionComponent<PropsWithChildren> = (props) => {
 
   return (
     <li className="my-8">
-      <p className="text-xl">{children}</p>
+      <p className="text-lg">{children}</p>
     </li>
   );
 };
@@ -67,7 +67,7 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
         </Heading>
 
         <p className="mb-12 mt-12 text-center">
-          Here&#39;s some less-technical information about me and my hobbies:
+          Here&#39;s some not-so-technical information about me and my hobbies:
         </p>
 
         <ul className="mx-auto grid max-w-2xl grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:justify-center">
