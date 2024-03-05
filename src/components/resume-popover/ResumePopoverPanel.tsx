@@ -1,6 +1,7 @@
 'use client';
 
 import { ContactIcons } from '@/components/ContactIcons';
+import { Heading } from '@/components/core/Heading';
 import { Popover } from '@/components/core/Popover';
 import { ResumePopoverTriggerButton } from '@/components/resume-popover/ResumePopoverTriggerButton';
 import { ResumePanel } from '@/components/ResumePanel';
@@ -11,14 +12,22 @@ export const ResumePopoverPanel: FunctionComponent = () => {
     <Popover
       trigger={<ResumePopoverTriggerButton />}
       anchor={<div className="fixed bottom-16 right-5 h-px w-12" />}
+      containerClassName="px-4 sm:px-8"
     >
-      <p className="mb-2 text-center font-heading font-semibold">Contact Me</p>
+      <Heading tag="h2" tagStyle="h5" className="mb-6 text-center">
+        Contact Me
+      </Heading>
       <ContactIcons
         showGitHub={false}
-        className="gap-8"
-        iconClassName="text-6xl"
+        className="gap-6"
+        color="primary"
+        variant="iconButton"
       />
-      <ResumePanel className="mt-8" iconClassName="text-6xl" />
+
+      <Heading tag="h2" tagStyle="h5" className="mb-6 mt-12 text-center">
+        View Resume
+      </Heading>
+      <ResumePanel className="min-w-80 gap-6" />
     </Popover>
   );
 };

@@ -119,13 +119,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
           Resume
         </Heading>
 
-        <div className="flex justify-center">
-          <ResumePanel
-            className="w-auto"
-            iconClassName="text-5xl mt-4"
-            buttonsOnly
-          />
-        </div>
+        <ResumePanel className="mt-12" />
       </FadeInContainer>
     </PageSection>
   );

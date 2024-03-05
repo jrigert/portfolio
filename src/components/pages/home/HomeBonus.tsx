@@ -93,10 +93,7 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
           </p>
           <p className="mt-2 text-center">
             Also feel free to{' '}
-            <ExternalLink
-              variant="primary"
-              href="https://github.com/jrigert/portfolio"
-            >
+            <ExternalLink href="https://github.com/jrigert/portfolio">
               take a look at the code
             </ExternalLink>
             .
@@ -104,52 +101,41 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
 
           <ul className="mx-auto mt-16 max-w-lg list-disc pl-4">
             <TechStackListItem>
-              <ExternalLink variant="primary" href="https://react.dev/">
-                React
-              </ExternalLink>{' '}
-              and{' '}
-              <ExternalLink variant="primary" href="https://nextjs.org/">
-                NextJS
-              </ExternalLink>{' '}
-              for the core framework
+              <ExternalLink href="https://react.dev/">React</ExternalLink> and{' '}
+              <ExternalLink href="https://nextjs.org/">NextJS</ExternalLink> for
+              the core framework
             </TechStackListItem>
 
             <TechStackListItem>
-              <ExternalLink
-                variant="primary"
-                href="https://www.typescriptlang.org/docs/"
-              >
+              <ExternalLink href="https://www.typescriptlang.org/docs/">
                 Typescript
               </ExternalLink>{' '}
               for strict type safety
             </TechStackListItem>
 
             <TechStackListItem>
-              <ExternalLink variant="primary" href="https://tailwindcss.com/">
+              <ExternalLink href="https://tailwindcss.com/">
                 Tailwind
               </ExternalLink>{' '}
               for styling
             </TechStackListItem>
 
             <TechStackListItem>
-              <ExternalLink
-                variant="primary"
-                href="https://www.radix-ui.com/primitives/"
-              >
+              <ExternalLink href="https://www.radix-ui.com/primitives/">
                 Radix Primitives
               </ExternalLink>{' '}
               for accessible popover and radio group components
             </TechStackListItem>
 
             <TechStackListItem>
-              <ExternalLink variant="primary" href="https://fontawesome.com/">
+              <ExternalLink href="https://fontawesome.com/">
                 FontAwesome
               </ExternalLink>{' '}
               for various icons
             </TechStackListItem>
 
             <TechStackListItem>
-              <ExternalLink variant="primary" href="https://fonts.google.com/">
+              <ExternalLink href="https://fonts.google.com/">
                 Google Fonts
               </ExternalLink>{' '}
               for typography
@@ -157,9 +143,7 @@ export const HomeBonus: FunctionComponent<HomePageSectionProps> = (props) => {
 
             <TechStackListItem>
               Hosted on{' '}
-              <ExternalLink variant="primary" href="https://vercel.com/">
-                Vercel
-              </ExternalLink>
+              <ExternalLink href="https://vercel.com/">Vercel</ExternalLink>
             </TechStackListItem>
           </ul>
         </div>

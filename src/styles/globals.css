@@ -38,6 +38,8 @@
     --orange: var(--orange-light);
     --cyan: var(--cyan-light);
 
+    --primary-foreground: var(--black);
+
     --background: var(--black);
     --foreground: var(--white);
 

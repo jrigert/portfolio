@@ -1,3 +1,4 @@
+import { classNames } from '@/utils/style';
 import { faXmark as faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { FunctionComponent, PropsWithChildren, ReactNode } from 'react';
@@ -5,6 +6,7 @@ import * as RadixPopover from '@radix-ui/react-popover';
 
 export interface PopoverProps {
   anchor?: ReactNode;
+  containerClassName?: string;
   trigger: ReactNode;
   /** sets the asChild property on the Trigger - defaults to true */
   triggerAsChild?: boolean;
@@ -13,7 +15,13 @@ export interface PopoverProps {
 export const Popover: FunctionComponent<PropsWithChildren<PopoverProps>> = (
   props,
 ) => {
-  const { children, anchor, trigger, triggerAsChild = true } = props;
+  const {
+    children,
+    anchor,
+    containerClassName,
+    trigger,
+    triggerAsChild = true,
+  } = props;
 
   return (
     <RadixPopover.Root>
@@ -26,7 +34,10 @@ export const Popover: FunctionComponent<PropsWithChildren<PopoverProps>> = (
 
       <RadixPopover.Portal>
         <RadixPopover.Content
-          className="rounded-xl border border-foreground-secondary bg-background-secondary px-8 pb-12 pt-5 text-foreground-secondary shadow-lg shadow-black/50 dark:shadow-gray-400/30"
+          className={classNames(
+            'rounded-xl border border-foreground-secondary bg-background-secondary px-8 pb-12 pt-5 text-foreground-secondary shadow-lg shadow-black/50 dark:shadow-gray-400/30',
+            containerClassName,
+          )}
           sideOffset={10}
           align="end"
         >
