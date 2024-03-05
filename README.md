@@ -1,12 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## TODO
-
-- double check lint and types
-- lighthouse audit
-- screenreader testing
-- all browser testing
-
 ## Getting Started
 
 First, run the development server:
