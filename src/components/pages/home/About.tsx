@@ -30,7 +30,10 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
       </FadeInContainer>
 
       <div className="flex justify-center">
-        <ImageCircle src="/images/me.png" alt="A picture of me, Jon Rigert" />
+        <ImageCircle
+          src="/images/me.png"
+          alt="A picture of me, Jon Rigert, wearing a blue suit jacket"
+        />
       </div>
     </PageSection>
   );

@@ -46,7 +46,7 @@ export const Header: FunctionComponent = () => {
               ? '/images/logo-white.svg'
               : '/images/logo.svg'
           }
-          alt="JR: Click to return home"
+          alt="Image of the initials J.R."
           width={50}
           height={30}
           priority

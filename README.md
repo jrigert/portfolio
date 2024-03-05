@@ -4,7 +4,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - double check lint and types
 - lighthouse audit
-- metadata for sharing?
 - screenreader testing
 - all browser testing
 

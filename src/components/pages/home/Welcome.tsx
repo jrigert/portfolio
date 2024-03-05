@@ -56,7 +56,6 @@ export const HomeWelcome: FunctionComponent<HomePageSectionProps> = (props) => {
       </Heading>
 
       <p
-        aria-label="Web Developer, Architect and Director"
         className={classNames(
           subHeadingClasses,
           'mb-1 mt-6 flex items-center text-center text-base tracking-wide sm:mb-3 sm:mt-8 sm:text-xl lg:text-3xl',
