@@ -82,7 +82,7 @@ export const HomeExperience: FunctionComponent<HomePageSectionProps> = (
   const { id } = props;
 
   return (
-    <PageSection id={id} fullHeight variant="secondary" className="pb-20">
+    <PageSection id={id} fullHeight variant="secondary" className="pb-36">
       <PageSectionHeading title="Experience" />
 
       <FadeInContainer>
