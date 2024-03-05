@@ -3,11 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODO
 
 - double check lint and types
-- PRODUCTION:
-  - Remove authentication
-  - Remove robots
-- README:
-  - Document .env variables
 - lighthouse audit
 - metadata for sharing?
 - screenreader testing
