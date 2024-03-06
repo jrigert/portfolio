@@ -1,5 +1,6 @@
 import { Header } from '@/components/navigation/Header';
 import { Providers } from '@/components/providers/Providers';
+import { BASE_URL } from '@/config/global';
 import { fonts } from '@/styles/fonts';
 import { classNames } from '@/utils/style';
 import type { Metadata } from 'next';
@@ -20,15 +21,15 @@ const titleDescriptionMetadata = {
 
 export const metadata: Metadata = {
   ...titleDescriptionMetadata,
-  metadataBase: new URL('https://www.jonrigert.com'),
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     ...titleDescriptionMetadata,
     type: 'profile',
-    url: 'https://www.jonrigert.com',
+    url: BASE_URL,
     firstName: 'Jon',
     lastName: 'Rigert',
     gender: 'male',
-    images: ['https://www.jonrigert.com/images/logo.svg'],
+    images: [`${BASE_URL}/images/logo.svg`],
   },
 };
 
