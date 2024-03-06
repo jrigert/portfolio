@@ -18,7 +18,7 @@ export const HomeAbout: FunctionComponent<HomePageSectionProps> = (props) => {
         <p className="mb-12 leading-8">
           Hi, I&#39;m <span className="font-bold text-primary">Jon</span> - a
           web developer with over a decade of experience. I&#39;m also a web
-          architect, team lead, and Director, dedicated to creating
+          architect, team lead, and director, dedicated to creating
           user-friendly web applications with clean and scalable code.
         </p>
 
