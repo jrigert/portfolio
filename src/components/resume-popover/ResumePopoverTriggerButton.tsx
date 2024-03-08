@@ -38,7 +38,7 @@ export const ResumePopoverTriggerButton = forwardRef<HTMLButtonElement>(
         color="loud"
         ref={ref}
         className={classNames(
-          'fixed bottom-5 right-5 h-12 w-12 rounded-full transition duration-500 ease-out motion-safe:hover:scale-110 motion-reduce:transition-none',
+          'fixed bottom-5 right-5 z-50 h-12 w-12 rounded-full transition duration-500 ease-out motion-safe:hover:scale-110 motion-reduce:transition-none',
           fadeInAnimationClass,
         )}
         {...registerAnimationFunctions}
